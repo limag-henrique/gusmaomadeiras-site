@@ -59,6 +59,25 @@
         @media(max-width: 768px) {
             .contact-grid {
                 grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 0;
+            }
+
+            .contact-info {
+                max-width: 100%;
+                margin: 0 auto;
+                box-sizing: border-box;
+                text-align: center;
+            }
+
+            .contact-info p {
+                flex-direction: column;
+                justify-content: center;
+                gap: 5px;
+            }
+
+            .contact-info i {
+                margin: 0 auto;
             }
 
             .contact-map iframe {
