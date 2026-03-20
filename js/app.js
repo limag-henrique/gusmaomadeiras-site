@@ -137,12 +137,14 @@ function WppLink(productName) {
 // UI Renderers
 function renderHome(container) {
   const heroHtml = `
-    <section class="hero-red-section" id="hero-slider" style="position: relative; overflow: hidden; background-color: var(--primary); padding: 100px 0; text-align: center;">
-      <div class="animated-lines">
-         <div class="line line1"></div>
-         <div class="line line2"></div>
-         <div class="line line3"></div>
-      </div>
+    <section id="hero-slider" style="position: relative; overflow: hidden; height: 70vh; min-height: 500px; display: flex; align-items: center; justify-content: center; text-align: center;">
+      <!-- Lazy loaded bg video to prevent render blocking -->
+      <video id="hero-bg-video" autoplay muted loop playsinline preload="metadata" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+          <source src="Images/video.webm" type="video/webm">
+      </video>
+      <!-- Dark overlay 45% -->
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.45); z-index: 1;"></div>
+      
       <div class="container hero-content" style="position: relative; z-index: 2; color: white;">
         <h1 style="font-size: 3rem; margin-bottom: 20px; font-weight: 700;">Produtos que duram gerações</h1>
         <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">Madeiras de alta qualidade para construir os melhores momentos da sua vida. Conheça nossa linha completa de portas, janelas e acabamentos.</p>
