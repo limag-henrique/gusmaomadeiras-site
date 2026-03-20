@@ -315,7 +315,7 @@ body {
   flex-grow: 1;
 }
 .whatsapp-btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -324,11 +324,15 @@ body {
   padding: 10px 15px;
   border-radius: 6px;
   text-decoration: none;
+  text-align: center;
   font-weight: 600;
   transition: var(--transition);
   border: none;
   width: 100%;
   cursor: pointer;
+}
+.whatsapp-btn i {
+  font-size: 1.4em;
 }
 .whatsapp-btn:hover {
   background-color: #1ebe5d;
@@ -418,7 +422,7 @@ body {
   filter: brightness(0) invert(1);
   margin-bottom: 20px;
 }
-.footer-content, footer .container {
+.footer-content {
   display: grid;
   grid-template-columns: 1.5fr 1fr 2fr;
   gap: 40px;
@@ -483,6 +487,18 @@ body {
   border-radius: 8px;
   overflow: hidden;
 }
+.mobile-map-btn {
+  display: none;
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-top: 15px;
+}
 .footer-bottom {
   background-color: #111;
   padding: 20px 0;
@@ -522,6 +538,12 @@ body {
   .nav-links a {
     margin: 15px 0;
     font-size: 1.2rem;
+  }
+  .map-container iframe {
+    display: none;
+  }
+  .mobile-map-btn {
+    display: block;
   }
 }
 
@@ -596,5 +618,38 @@ body {
     border-bottom: 1px solid #eee;
     padding-right: 0;
     padding-bottom: 20px;
+  }
+}
+
+/* Floating WhatsApp Button */
+.float-wpp {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 35px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+.float-wpp:hover {
+  transform: scale(1.1);
+  color: #FFF;
+}
+@media (max-width: 768px) {
+  .float-wpp {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 30px;
   }
 }

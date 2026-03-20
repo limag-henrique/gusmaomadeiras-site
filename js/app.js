@@ -37,9 +37,24 @@ async function loadData() {
 
 // Router
 function navigate(route, id = null) {
-  window.history.pushState({ route, id }, '', `#${route}${id ? '?id=' + id : ''}`);
+  const isProductsPage = window.location.pathname.includes('produtos.html');
+  
+  if (route === 'home' && isProductsPage) {
+     window.location.href = 'index.html';
+     return;
+  }
+  if (route === 'products' && !isProductsPage) {
+     window.location.href = `produtos.html${id ? '?categoryId=' + id : ''}`;
+     return;
+  }
+  
+  if (route === 'product') {
+     window.history.pushState({ route, id }, '', `#product?id=${id}`);
+  } else {
+     window.history.pushState({ route, id }, '', id ? `?categoryId=${id}` : window.location.pathname);
+  }
+  
   handleRoute();
-  // Close mobile menu if open
   document.getElementById('nav-links').classList.remove('active');
   window.scrollTo(0, 0);
 }
@@ -47,30 +62,34 @@ function navigate(route, id = null) {
 window.addEventListener('popstate', handleRoute);
 
 function handleRoute() {
-  const hash = window.location.hash || '#home';
-  const url = new URL('http://dummy' + hash.replace('#', '/'));
-  let route = url.pathname.replace('/', '') || 'home';
-  const idParams = new URLSearchParams(url.search);
-  const id = idParams.get('id');
+  const hash = window.location.hash || '';
+  const urlParams = new URLSearchParams(window.location.search);
+  const isProductsPage = window.location.pathname.includes('produtos.html');
+  
+  let route = isProductsPage ? 'products' : 'home';
+  let id = urlParams.get('categoryId');
+
+  if (hash.startsWith('#product?')) {
+      route = 'product';
+      const idParams = new URLSearchParams(hash.split('?')[1]);
+      id = idParams.get('id');
+  } else if (hash.startsWith('#products') && !isProductsPage) {
+      window.location.href = 'produtos.html';
+      return;
+  }
 
   const app = document.getElementById('app');
   app.style.opacity = '0';
   
   setTimeout(() => {
     app.innerHTML = '';
-    
-    if (route === 'home') {
-      renderHome(app);
-    } else if (route === 'products') {
-      renderProducts(app, id); // id acts as category filter
-    } else if (route === 'product') {
-      renderProductDetail(app, id);
-    }
+    if (route === 'home') renderHome(app);
+    else if (route === 'products') renderProducts(app, id);
+    else if (route === 'product') renderProductDetail(app, id);
     
     app.style.opacity = '1';
     app.style.transition = 'opacity 0.4s';
     
-    // hide loader
     document.getElementById('loader').style.display = 'none';
   }, 200);
 }
@@ -117,21 +136,12 @@ function WppLink(productName) {
 
 // UI Renderers
 function renderHome(container) {
-  // Carousel images
-  const excludedKeywords = ['portas', 'janelas', 'básculas', 'portas de correr', 'linha panorâmica', 'linha', 'marcos', 'outros'];
-  const realProducts = productsData.filter(p => {
-    const t = p.title.toLowerCase().trim();
-    return !excludedKeywords.some(ex => t === ex);
-  });
-  const carouselImages = realProducts.slice(0, 5).map(p => p.image).filter(Boolean);
-  if(carouselImages.length === 0) carouselImages.push('https://www.gusmaomadeiras.com.br/assets/slider-placeholder.jpg'); // placeholder
-  
   const heroHtml = `
     <section class="hero-slider" id="hero-slider">
-      ${carouselImages.map((img, i) => `<div class="hero-slide ${i===0?'active':''}" style="background-image: url('${img}');"></div>`).join('')}
-      <div class="hero-overlay">
+      <div class="hero-slide active" style="background-color: var(--text-dark); background-image: var(--wood-accent);"></div>
+      <div class="hero-overlay" style="background: rgba(0,0,0,0.6);">
         <div class="container hero-content">
-          <h1>Elegância em cada detalhe</h1>
+          <h1>Linhas que se movem de forma moderna e surpreendente</h1>
           <p>Madeiras de alta qualidade para construir os melhores momentos da sua vida. Conheça nossa linha completa de portas, janelas e acabamentos.</p>
           <button class="btn" onclick="navigate('products')">Ver Produtos</button>
         </div>
@@ -210,9 +220,9 @@ function renderProducts(container, categoryId) {
           <aside class="filter-sidebar">
             <h3>Filtrar por Linha</h3>
             <ul class="filter-list">
-              <li><a href="#" class="${!categoryId ? 'active' : ''}" onclick="event.preventDefault(); renderProducts(document.getElementById('app'), null)">Todos os Produtos</a></li>
+              <li><a href="#" class="${!categoryId ? 'active' : ''}" onclick="event.preventDefault(); navigate('products', null)">Todos os Produtos</a></li>
               ${categoriesData.map(c => `
-                <li><a href="#" class="${categoryId === c.id ? 'active' : ''}" onclick="event.preventDefault(); renderProducts(document.getElementById('app'), '${c.id}')">${c.name}</a></li>
+                <li><a href="#" class="${categoryId === c.id ? 'active' : ''}" onclick="event.preventDefault(); navigate('products', '${c.id}')">${c.name}</a></li>
               `).join('')}
             </ul>
           </aside>
