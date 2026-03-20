@@ -137,14 +137,16 @@ function WppLink(productName) {
 // UI Renderers
 function renderHome(container) {
   const heroHtml = `
-    <section class="hero-slider" id="hero-slider">
-      <div class="hero-slide active" style="background-color: var(--text-dark); background-image: var(--wood-accent);"></div>
-      <div class="hero-overlay" style="background: rgba(0,0,0,0.6);">
-        <div class="container hero-content">
-          <h1>Linhas que se movem de forma moderna e surpreendente</h1>
-          <p>Madeiras de alta qualidade para construir os melhores momentos da sua vida. Conheça nossa linha completa de portas, janelas e acabamentos.</p>
-          <button class="btn" onclick="navigate('products')">Ver Produtos</button>
-        </div>
+    <section class="hero-red-section" id="hero-slider" style="position: relative; overflow: hidden; background-color: var(--primary); padding: 100px 0; text-align: center;">
+      <div class="animated-lines">
+         <div class="line line1"></div>
+         <div class="line line2"></div>
+         <div class="line line3"></div>
+      </div>
+      <div class="container hero-content" style="position: relative; z-index: 2; color: white;">
+        <h1 style="font-size: 3rem; margin-bottom: 20px; font-weight: 700;">Produtos que duram gerações</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">Madeiras de alta qualidade para construir os melhores momentos da sua vida. Conheça nossa linha completa de portas, janelas e acabamentos.</p>
+        <button class="btn btn-white-red" onclick="navigate('products')">Ver Produtos</button>
       </div>
     </section>
   `;
@@ -198,18 +200,10 @@ function renderHome(container) {
 }
 
 function renderProducts(container, categoryId) {
-    const excludedKeywords = ['portas', 'janelas', 'básculas', 'portas de correr', 'linha panorâmica', 'linha', 'marcos', 'outros'];
-    const realProducts = productsData.filter(p => !excludedKeywords.some(ex => p.title.toLowerCase().trim() === ex));
-    const carouselImages = realProducts.slice(0, 5).map(p => p.image).filter(Boolean);
-    if(carouselImages.length === 0) carouselImages.push('https://www.gusmaomadeiras.com.br/assets/slider-placeholder.jpg');
-    
     const bannerHtml = `
-      <section class="hero-slider" style="height: 40vh;" id="hero-slider">
-        ${carouselImages.map((img, i) => `<div class="hero-slide ${i===0?'active':''}" style="background-image: url('${img}');"></div>`).join('')}
-        <div class="hero-overlay">
-          <div class="container hero-content">
-            <h1 style="font-size: 2.5rem;">Nossas Categorias e Produtos</h1>
-          </div>
+      <section class="hero-red-section" style="background-color: var(--primary); padding: 60px 0; text-align: center;">
+        <div class="container">
+          <h1 style="color: white; font-size: 2.5rem; margin: 0;">Nossas Categorias e Produtos</h1>
         </div>
       </section>
     `;
