@@ -107,17 +107,38 @@ function getHighlights() {
 
 function classifyCategory(productTitle) {
   const title = productTitle.toLowerCase();
-  if (title.includes('panorâmica') || title.includes('panoramica')) return 'panoramica';
-  if (title.includes('vidro temperado')) return 'vidro-temperado';
-  if (title.includes('diagonal')) return 'diagonal';
-  if (title.includes('tucano')) return 'tucano';
-  if (title.includes('correr')) return 'correr';
+  // Physical categories prioritization
   if (title.includes('marco') || title.includes('portal') || title.includes('alisar')) return 'marcos';
   if (title.includes('seteira')) return 'seteira';
+  if (title.includes('correr')) return 'correr';
   if (title.includes('báscula') || title.includes('bascula')) return 'bascula';
   if (title.includes('janela')) return 'janela';
   if (title.includes('porta')) return 'porta';
   return 'outros';
+}
+
+function getCategoryName(id) {
+  const cat = categoriesData.find(c => c.id === id);
+  return cat ? cat.name : 'Outros';
+}
+
+function getProductLine(title) {
+  title = title.toLowerCase();
+  if (title.includes('panorâmica') || title.includes('panoramica')) return 'Panorâmica';
+  if (title.includes('vidro temperado')) return 'Vidro Temperado';
+  if (title.includes('diagonal')) return 'Diagonal';
+  if (title.includes('tucano')) return 'Tucano';
+  if (title.includes('bigbrother') || title.includes('big brother')) return 'Big Brother';
+  if (title.includes('mexicana')) return 'Mexicana';
+  if (title.includes('genova') || title.includes('gênova')) return 'Gênova';
+  if (title.includes('milão') || title.includes('milao')) return 'Milão';
+  if (title.includes('escama de peixe')) return 'Escama de Peixe';
+  if (title.includes('imperial')) return 'Imperial';
+  if (title.includes('napoleão') || title.includes('napoleao')) return 'Napoleão';
+  if (title.includes('colonial')) return 'Colonial';
+  if (title.includes('estruturada')) return 'Estruturada';
+  if (title.includes('quadriculado')) return 'Maciça / Quadriculado';
+  return 'Linha Tradicional';
 }
 
 function WppLink(productName) {
@@ -174,7 +195,7 @@ function renderHome(container) {
             <div class="product-card" onclick="navigate('product', ${idx})">
               <img src="${p.image || 'https://via.placeholder.com/300x250?text=Sem+Foto'}" class="product-img" alt="${p.title}" onerror="this.src='https://via.placeholder.com/300x250?text=Sem+Foto'">
               <div class="product-info">
-                <span class="product-category">${classifyCategory(p.title)}</span>
+                <span class="product-category">${getCategoryName(classifyCategory(p.title))}</span>
                 <h3 class="product-title">${p.title}</h3>
               </div>
             </div>
@@ -236,7 +257,8 @@ function renderProducts(container, categoryId, searchQuery) {
       p.title.toLowerCase().includes(q) || 
       (p.description && p.description.toLowerCase().includes(q)) ||
       classifyCategory(p.title).toLowerCase().includes(q) ||
-      categoriesData.some(c => c.id === classifyCategory(p.title) && c.name.toLowerCase().includes(q))
+      getCategoryName(classifyCategory(p.title)).toLowerCase().includes(q) ||
+      getProductLine(p.title).toLowerCase().includes(q)
     );
   }
 
@@ -254,7 +276,7 @@ function renderProducts(container, categoryId, searchQuery) {
           <div class="product-card" onclick="navigate('product', ${idx})">
             <img src="${p.image || 'https://via.placeholder.com/300x250?text=Sem+Foto'}" class="product-img" alt="${p.title}" onerror="this.src='https://via.placeholder.com/300x250?text=Sem+Foto'">
             <div class="product-info">
-              <span class="product-category">${classifyCategory(p.title)}</span>
+              <span class="product-category">${getCategoryName(classifyCategory(p.title))}</span>
               <h3 class="product-title">${p.title}</h3>
             </div>
           </div>
@@ -282,7 +304,7 @@ function renderProductDetail(container, productId) {
               <img src="${p.image || 'https://via.placeholder.com/600x600?text=Sem+Foto'}" alt="${p.title}" onerror="this.src='https://via.placeholder.com/600x600?text=Sem+Foto'">
             </div>
             <div class="product-detail-info">
-              <span class="product-category">${classifyCategory(p.title).replace('-', ' ').toUpperCase()}</span>
+              <span class="product-category">${getCategoryName(classifyCategory(p.title))}</span>
               <h1>${p.title}</h1>
               <div class="product-detail-desc">
                 ${p.description || 'Descrição detalhada não disponível no momento. Entre em contato para mais especificações técnicas.'}
@@ -291,7 +313,7 @@ function renderProductDetail(container, productId) {
                 <h3>Especificações Técnicas</h3>
                 <ul class="spec-list">
                   <li><span class="spec-label">Material:</span> <span>${p.title.includes('angelim') ? 'Madeira Angelim' : 'Consulte'}</span></li>
-                  <li><span class="spec-label">Linha:</span> <span>${classifyCategory(p.title).replace('-', ' ').toUpperCase()}</span></li>
+                  <li><span class="spec-label">Linha:</span> <span>${getProductLine(p.title)}</span></li>
                   ${p.title.includes('vidro') ? '<li><span class="spec-label">Detalhe:</span> <span>Com Vidro</span></li>' : ''}
                 </ul>
               </div>
