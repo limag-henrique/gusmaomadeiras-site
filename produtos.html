@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gusmão Madeiras - Portfólio de Produtos</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <div id="loader">
         <div class="spinner"></div>
@@ -24,7 +26,7 @@
             <nav class="nav-links" id="nav-links">
                 <a href="index.html" onclick="event.preventDefault(); navigate('home')">Início</a>
                 <a href="produtos.html" onclick="event.preventDefault(); navigate('products')">Produtos</a>
-                <a href="#footer-map">Localização</a>
+                <a href="contato.html">Contato</a>
             </nav>
         </div>
     </header>
@@ -37,28 +39,17 @@
         <div class="container footer-content">
             <div class="footer-brand">
                 <img src="logo.png" alt="Gusmão Madeiras" class="footer-logo">
-                <p>A excelência em madeiras, portas e janelas para o seu projeto. Tradição e qualidade que você confia.</p>
+                <p>A excelência em madeiras, portas e janelas para o seu projeto. Tradição e qualidade que você confia.
+                </p>
+                <p><i class="fas fa-envelope" style="margin-right: 8px;"></i>contato@gusmaomadeiras.com.br</p>
                 <div class="social-links">
                     <a href="https://wa.me/5531985082038" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     <a href="https://instagram.com/gusmaomadeiras" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="https://facebook.com/gusmaomadeiras" target="_blank"><i class="fab fa-facebook"></i></a>
                 </div>
             </div>
-            <div class="footer-nav">
-                <h3>Links Úteis</h3>
-                <ul>
-                    <li><a href="#" onclick="navigate('home')">Página Inicial</a></li>
-                    <li><a href="#" onclick="navigate('products')">Catálogo Completo</a></li>
-                    <li><a href="#footer-map">Onde Estamos</a></li>
-                </ul>
-            </div>
-            <div class="footer-map" id="footer-map">
-                <h3>Nossa Localização</h3>
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119932.19363065608!2d-44.084776!3d-19.957648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDU3JzI3LjUiUyA0NMKwMDUnMDUuMiJX!5e0!3m2!1spt-BR!2sbr!4v1684849204392!5m2!1spt-BR!2sbr" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <a href="https://maps.google.com/?q=-19.957648,-44.084776" target="_blank" class="mobile-map-btn"><i class="fas fa-map-marker-alt"></i> Abrir no Google Maps</a>
-                </div>
-            </div>
+
+
         </div>
         <div class="footer-bottom">
             <div class="container">
@@ -74,4 +65,5 @@
     <script src="js/components.js"></script>
     <script src="js/app.js"></script>
 </body>
+
 </html>

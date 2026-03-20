@@ -20,7 +20,7 @@ async function loadData() {
     const res = await fetch('data.json');
     if (res.ok) {
       const data = await res.json();
-      productsData = data.products || [];
+      productsData = (data.products || []).filter(p => !p.url.includes('/page/') && p.title.trim().toLowerCase() !== 'produtos');
     } else {
       console.warn('data.json not found. Using placeholder data.');
       // Placeholder if scrape failed/pending
@@ -37,23 +37,14 @@ async function loadData() {
 
 // Router
 function navigate(route, id = null) {
-  const isProductsPage = window.location.pathname.includes('produtos.html');
-  
-  if (route === 'home' && isProductsPage) {
-     window.location.href = 'index.html';
-     return;
+  if (route === 'home') {
+    window.history.pushState({ route, id }, '', 'index.html');
+  } else if (route === 'products') {
+    window.history.pushState({ route, id }, '', `produtos.html${id ? '?categoryId=' + id : ''}`);
+  } else if (route === 'product') {
+    window.history.pushState({ route, id }, '', `produtos.html#product?id=${id}`);
   }
-  if (route === 'products' && !isProductsPage) {
-     window.location.href = `produtos.html${id ? '?categoryId=' + id : ''}`;
-     return;
-  }
-  
-  if (route === 'product') {
-     window.history.pushState({ route, id }, '', `#product?id=${id}`);
-  } else {
-     window.history.pushState({ route, id }, '', id ? `?categoryId=${id}` : window.location.pathname);
-  }
-  
+
   handleRoute();
   document.getElementById('nav-links').classList.remove('active');
   window.scrollTo(0, 0);
@@ -65,44 +56,44 @@ function handleRoute() {
   const hash = window.location.hash || '';
   const urlParams = new URLSearchParams(window.location.search);
   const isProductsPage = window.location.pathname.includes('produtos.html');
-  
+
   let route = isProductsPage ? 'products' : 'home';
   let id = urlParams.get('categoryId');
 
   if (hash.startsWith('#product?')) {
-      route = 'product';
-      const idParams = new URLSearchParams(hash.split('?')[1]);
-      id = idParams.get('id');
-  } else if (hash.startsWith('#products') && !isProductsPage) {
-      window.location.href = 'produtos.html';
-      return;
+    route = 'product';
+    const idParams = new URLSearchParams(hash.split('?')[1]);
+    id = idParams.get('id');
   }
 
   const app = document.getElementById('app');
   app.style.opacity = '0';
-  
+
   setTimeout(() => {
     app.innerHTML = '';
     if (route === 'home') renderHome(app);
     else if (route === 'products') renderProducts(app, id);
     else if (route === 'product') renderProductDetail(app, id);
-    
+
     app.style.opacity = '1';
-    app.style.transition = 'opacity 0.4s';
-    
-    document.getElementById('loader').style.display = 'none';
-  }, 200);
+    app.style.transition = 'opacity 0.2s';
+
+    const loader = document.getElementById('loader');
+    if (loader && loader.style.display !== 'none') {
+      loader.style.display = 'none';
+    }
+  }, 50);
 }
 
 function getHighlights() {
   const excludedKeywords = [
-    'portas', 'janelas', 'básculas', 'portas de correr', 
-    'linha panorâmica', 'linha vidro temperado', 
-    'linha tucano', 'linha diagonal', 'outros produtos', 
+    'portas', 'janelas', 'básculas', 'portas de correr',
+    'linha panorâmica', 'linha vidro temperado',
+    'linha tucano', 'linha diagonal', 'outros produtos',
     'outros linha moderna', 'marcos', 'seteiras', 'outros',
     'linha modernas'
   ];
-  
+
   const validProducts = productsData.filter(p => {
     const t = p.title.toLowerCase().trim();
     if (excludedKeywords.some(ex => t === ex)) return false;
@@ -115,23 +106,23 @@ function getHighlights() {
 }
 
 function classifyCategory(productTitle) {
-    const title = productTitle.toLowerCase();
-    if(title.includes('panorâmica') || title.includes('panoramica')) return 'panoramica';
-    if(title.includes('vidro temperado')) return 'vidro-temperado';
-    if(title.includes('diagonal')) return 'diagonal';
-    if(title.includes('tucano')) return 'tucano';
-    if(title.includes('correr')) return 'correr';
-    if(title.includes('marco') || title.includes('portal') || title.includes('alisar')) return 'marcos';
-    if(title.includes('seteira')) return 'seteira';
-    if(title.includes('báscula') || title.includes('bascula')) return 'bascula';
-    if(title.includes('janela')) return 'janela';
-    if(title.includes('porta')) return 'porta';
-    return 'outros';
+  const title = productTitle.toLowerCase();
+  if (title.includes('panorâmica') || title.includes('panoramica')) return 'panoramica';
+  if (title.includes('vidro temperado')) return 'vidro-temperado';
+  if (title.includes('diagonal')) return 'diagonal';
+  if (title.includes('tucano')) return 'tucano';
+  if (title.includes('correr')) return 'correr';
+  if (title.includes('marco') || title.includes('portal') || title.includes('alisar')) return 'marcos';
+  if (title.includes('seteira')) return 'seteira';
+  if (title.includes('báscula') || title.includes('bascula')) return 'bascula';
+  if (title.includes('janela')) return 'janela';
+  if (title.includes('porta')) return 'porta';
+  return 'outros';
 }
 
 function WppLink(productName) {
-    const msg = encodeURIComponent(`Olá! Gostaria de solicitar um orçamento para o produto: ${productName}. Podem me passar mais informações?`);
-    return `https://wa.me/${wppNumber}?text=${msg}`;
+  const msg = encodeURIComponent(`Olá! Gostaria de solicitar um orçamento para o produto: ${productName}. Podem me passar mais informações?`);
+  return `https://wa.me/${wppNumber}?text=${msg}`;
 }
 
 // UI Renderers
@@ -183,9 +174,6 @@ function renderHome(container) {
               <div class="product-info">
                 <span class="product-category">${classifyCategory(p.title)}</span>
                 <h3 class="product-title">${p.title}</h3>
-                  <a href="${WppLink(p.title)}" target="_blank" class="whatsapp-btn" onclick="event.stopPropagation()">
-                    <i class="fab fa-whatsapp"></i> Solicitar um orçamento
-                  </a>
               </div>
             </div>
           `).join('')}
@@ -202,15 +190,15 @@ function renderHome(container) {
 }
 
 function renderProducts(container, categoryId) {
-    const bannerHtml = `
+  const bannerHtml = `
       <section class="hero-red-section" style="background-color: var(--primary); padding: 60px 0; text-align: center;">
         <div class="container">
-          <h1 style="color: white; font-size: 2.5rem; margin: 0;">Nossas Categorias e Produtos</h1>
+          <h1 style="color: white; font-size: 2.5rem; margin: 0;">Nossos Produtos</h1>
         </div>
       </section>
     `;
 
-    const layoutHtml = `
+  const layoutHtml = `
       <section class="section-white">
         <div class="container products-page-layout">
           <aside class="filter-sidebar">
@@ -230,49 +218,46 @@ function renderProducts(container, categoryId) {
       </section>
     `;
 
-    container.innerHTML = bannerHtml + layoutHtml;
-    startCarousel();
+  container.innerHTML = bannerHtml + layoutHtml;
+  startCarousel();
 
-    let filtered = productsData;
-    if (categoryId) {
-        filtered = productsData.filter(p => classifyCategory(p.title) === categoryId);
-    }
-    
-    const gridContainer = document.getElementById('products-main-grid');
-    if (filtered.length === 0) {
-        gridContainer.innerHTML = '<p style="text-align:center">Nenhum produto encontrado neste filtro.</p>';
-        return;
-    }
-    
-    const gridHtml = `
+  let filtered = productsData;
+  if (categoryId) {
+    filtered = productsData.filter(p => classifyCategory(p.title) === categoryId);
+  }
+
+  const gridContainer = document.getElementById('products-main-grid');
+  if (filtered.length === 0) {
+    gridContainer.innerHTML = '<p style="text-align:center">Nenhum produto encontrado neste filtro.</p>';
+    return;
+  }
+
+  const gridHtml = `
       <div class="products-grid">
         ${filtered.map(p => {
-            const idx = productsData.indexOf(p);
-            return `
+    const idx = productsData.indexOf(p);
+    return `
           <div class="product-card" onclick="navigate('product', ${idx})">
             <img src="${p.image || 'https://via.placeholder.com/300x250?text=Sem+Foto'}" class="product-img" alt="${p.title}" onerror="this.src='https://via.placeholder.com/300x250?text=Sem+Foto'">
             <div class="product-info">
               <span class="product-category">${classifyCategory(p.title)}</span>
               <h3 class="product-title">${p.title}</h3>
-              <a href="${WppLink(p.title)}" target="_blank" class="whatsapp-btn" onclick="event.stopPropagation()">
-                <i class="fab fa-whatsapp"></i> Solicitar um orçamento
-              </a>
             </div>
           </div>
         `}).join('')}
       </div>
     `;
-    gridContainer.innerHTML = gridHtml;
+  gridContainer.innerHTML = gridHtml;
 }
 
 function renderProductDetail(container, productId) {
-    const p = productsData[productId];
-    if(!p) {
-        container.innerHTML = `<div class="container section-white"><h2 class="section-title">Produto não encontrado</h2></div>`;
-        return;
-    }
+  const p = productsData[productId];
+  if (!p) {
+    container.innerHTML = `<div class="container section-white"><h2 class="section-title">Produto não encontrado</h2></div>`;
+    return;
+  }
 
-    const html = `
+  const html = `
       <section class="section-white">
         <div class="container">
           <a href="#" class="back-btn" onclick="event.preventDefault(); window.history.back()">
@@ -296,15 +281,12 @@ function renderProductDetail(container, productId) {
                   ${p.title.includes('vidro') ? '<li><span class="spec-label">Detalhe:</span> <span>Com Vidro</span></li>' : ''}
                 </ul>
               </div>
-              <a href="${WppLink(p.title)}" target="_blank" class="whatsapp-btn" style="font-size: 1.2rem; padding: 15px;">
-                <i class="fab fa-whatsapp"></i> Solicitar um orçamento
-              </a>
             </div>
           </div>
         </div>
       </section>
     `;
-    container.innerHTML = html;
+  container.innerHTML = html;
 }
 
 // Utils
@@ -312,7 +294,7 @@ let carouselInterval;
 function startCarousel() {
   clearInterval(carouselInterval);
   let slides = document.querySelectorAll('.hero-slide');
-  if(slides.length <= 1) return;
+  if (slides.length <= 1) return;
   let current = 0;
   carouselInterval = setInterval(() => {
     slides[current].classList.remove('active');
@@ -322,18 +304,18 @@ function startCarousel() {
 }
 
 function toggleMenu() {
-    document.getElementById('nav-links').classList.toggle('active');
+  document.getElementById('nav-links').classList.toggle('active');
 }
 
 // Setup navbar shrink on scroll
 window.addEventListener('scroll', () => {
-    if(window.scrollY > 50) {
-        document.getElementById('navbar').style.padding = '10px 0';
-        document.getElementById('navbar').style.boxShadow = 'var(--shadow-hover)';
-    } else {
-        document.getElementById('navbar').style.padding = '15px 0';
-        document.getElementById('navbar').style.boxShadow = 'var(--shadow)';
-    }
+  if (window.scrollY > 50) {
+    document.getElementById('navbar').style.padding = '10px 0';
+    document.getElementById('navbar').style.boxShadow = 'var(--shadow-hover)';
+  } else {
+    document.getElementById('navbar').style.padding = '15px 0';
+    document.getElementById('navbar').style.boxShadow = 'var(--shadow)';
+  }
 });
 
 // Init

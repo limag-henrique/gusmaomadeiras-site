@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Gusmão Madeiras</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .contact-page {
+            padding: 80px 0;
+            background-color: var(--bg-white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info {
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--primary);
+        }
+
+        .contact-info h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact-info i {
+            color: var(--primary);
+            font-size: 1.5rem;
+            width: 30px;
+            text-align: center;
+        }
+
+        .contact-map iframe {
+            width: 100%;
+            height: 500px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        @media(max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-map iframe {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo-link">
+                <img src="logo.png" alt="Gusmão Madeiras Logo" class="logo">
+            </a>
+            <!-- Desktop Nav needs spacing adjustment without JS toggle if static or we handle strictly responsive -->
+            <nav class="nav-links" id="nav-links" style="display:flex;">
+                <a href="index.html">Início</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="contato.html" class="active">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-red-section"
+            style="background-color: var(--primary); padding: 80px 0; text-align: center;">
+            <div class="container">
+                <h1 style="color: white; font-size: 2.5rem; margin: 0;">Fale Conosco</h1>
+            </div>
+        </section>
+
+        <section class="contact-page">
+            <div class="container contact-grid">
+                <div class="contact-info">
+                    <h2>Gusmão Madeiras</h2>
+                    <p style="margin-bottom: 25px; color: #555;">Trazendo excelência e qualidade para a sua casa através
+                        da madeira. Nossa tradição atende desde o seu projeto até as peças de alto padrão.</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Rua Quarenta e Dois, 690 Tropical, Contagem</p>
+                    <p><i class="fas fa-phone-alt"></i> (31) 3356-9905 / (31) 9 8508-2038</p>
+                    <p><i class="fas fa-envelope"></i> contato@gusmaomadeiras.com.br</p>
+                    <p><i class="far fa-clock"></i> Atendimento de segunda a sexta-feira, de 7:30 às 17 h e sábados de 9 às 12 h</p>
+                </div>
+                <div class="contact-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119932.19363065608!2d-44.084776!3d-19.957648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDU3JzI3LjUiUyA0NMKwMDUnMDUuMiJX!5e0!3m2!1spt-BR!2sbr!4v1684849204392!5m2!1spt-BR!2sbr"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <img src="logo.png" alt="Gusmão Madeiras" class="footer-logo">
+                <p>A excelência em madeiras, portas e janelas para o seu projeto. Tradição e qualidade que você confia.
+                </p>
+                <p><i class="fas fa-envelope" style="margin-right: 8px;"></i>contato@gusmaomadeiras.com.br</p>
+                <div class="social-links">
+                    <a href="https://wa.me/5531985082038" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://instagram.com/gusmaomadeiras" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com/gusmaomadeiras" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>Gusmão Madeiras – Todos os Direitos Reservados | CNPJ 3128705600100</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5531985082038" target="_blank" class="float-wpp" title="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+
+</html>
