@@ -7,10 +7,6 @@ let categoriesData = [
   { id: 'janela', name: 'Janela', icon: 'fa-window-maximize' },
   { id: 'bascula', name: 'Básculas', icon: 'fa-layer-group' },
   { id: 'seteira', name: 'Seteiras', icon: 'fa-align-justify' },
-  { id: 'panoramica', name: 'Linha Panorâmica', icon: 'fa-panorama' },
-  { id: 'vidro-temperado', name: 'Linha Vidro Temperado', icon: 'fa-border-all' },
-  { id: 'diagonal', name: 'Linha Diagonal', icon: 'fa-slash' },
-  { id: 'tucano', name: 'Linha Tucano', icon: 'fa-kiwi-bird' },
   { id: 'marcos', name: 'Marcos Portais Alisares', icon: 'fa-ruler-combined' },
   { id: 'correr', name: 'Porta de Correr', icon: 'fa-door-open' }
 ];
@@ -36,13 +32,16 @@ async function loadData() {
 }
 
 // Router
-function navigate(route, id = null) {
+function navigate(route, id = null, search = null) {
   if (route === 'home') {
-    window.history.pushState({ route, id }, '', 'index.html');
+    window.history.pushState({ route, id, search }, '', 'index.html');
   } else if (route === 'products') {
-    window.history.pushState({ route, id }, '', `produtos.html${id ? '?categoryId=' + id : ''}`);
+    let url = 'produtos.html';
+    if(id) url += '?categoryId=' + id;
+    else if(search) url += '?search=' + encodeURIComponent(search);
+    window.history.pushState({ route, id, search }, '', url);
   } else if (route === 'product') {
-    window.history.pushState({ route, id }, '', `produtos.html#product?id=${id}`);
+    window.history.pushState({ route, id, search }, '', `produtos.html#product?id=${id}`);
   }
 
   handleRoute();
@@ -59,6 +58,7 @@ function handleRoute() {
 
   let route = isProductsPage ? 'products' : 'home';
   let id = urlParams.get('categoryId');
+  let search = urlParams.get('search');
 
   if (hash.startsWith('#product?')) {
     route = 'product';
@@ -72,7 +72,7 @@ function handleRoute() {
   setTimeout(() => {
     app.innerHTML = '';
     if (route === 'home') renderHome(app);
-    else if (route === 'products') renderProducts(app, id);
+    else if (route === 'products') renderProducts(app, id, search);
     else if (route === 'product') renderProductDetail(app, id);
 
     app.style.opacity = '1';
@@ -189,7 +189,7 @@ function renderHome(container) {
   startCarousel();
 }
 
-function renderProducts(container, categoryId) {
+function renderProducts(container, categoryId, searchQuery) {
   const bannerHtml = `
       <section class="hero-red-section" style="background-color: var(--primary); padding: 60px 0; text-align: center;">
         <div class="container">
@@ -202,11 +202,14 @@ function renderProducts(container, categoryId) {
       <section class="section-white">
         <div class="container products-page-layout">
           <aside class="filter-sidebar">
-            <h3>Filtrar por Linha</h3>
-            <ul class="filter-list">
-              <li><a href="#" class="${!categoryId ? 'active' : ''}" onclick="event.preventDefault(); navigate('products', null)">Todos os Produtos</a></li>
+            <div class="filter-header" onclick="toggleMobileFilter()" style="cursor:pointer; display:flex; justify-content:space-between; align-items:center;">
+                <h3 style="margin-bottom:0; border:none;">Filtrar por Linha</h3>
+                <i class="fas fa-chevron-down mobile-only-icon" id="filter-chevron" style="display:none; color:var(--primary); font-size:1.2rem;"></i>
+            </div>
+            <ul class="filter-list collapsed-mobile" id="filter-list" style="margin-top: 20px;">
+              <li><a href="#" class="${!categoryId && !searchQuery ? 'active' : ''}" onclick="event.preventDefault(); navigate('products', null, null); closeMobileFilter();">Todos os Produtos</a></li>
               ${categoriesData.map(c => `
-                <li><a href="#" class="${categoryId === c.id ? 'active' : ''}" onclick="event.preventDefault(); navigate('products', '${c.id}')">${c.name}</a></li>
+                <li><a href="#" class="${categoryId === c.id ? 'active' : ''}" onclick="event.preventDefault(); navigate('products', '${c.id}', null); closeMobileFilter();">${c.name}</a></li>
               `).join('')}
             </ul>
           </aside>
@@ -224,11 +227,19 @@ function renderProducts(container, categoryId) {
   let filtered = productsData;
   if (categoryId) {
     filtered = productsData.filter(p => classifyCategory(p.title) === categoryId);
+  } else if (searchQuery) {
+    const q = searchQuery.toLowerCase();
+    filtered = productsData.filter(p => 
+      p.title.toLowerCase().includes(q) || 
+      (p.description && p.description.toLowerCase().includes(q)) ||
+      classifyCategory(p.title).toLowerCase().includes(q) ||
+      categoriesData.some(c => c.id === classifyCategory(p.title) && c.name.toLowerCase().includes(q))
+    );
   }
 
   const gridContainer = document.getElementById('products-main-grid');
   if (filtered.length === 0) {
-    gridContainer.innerHTML = '<p style="text-align:center">Nenhum produto encontrado neste filtro.</p>';
+    gridContainer.innerHTML = '<p style="text-align:center">Nenhum produto encontrado neste filtro ou pesquisa.</p>';
     return;
   }
 
@@ -320,3 +331,38 @@ window.addEventListener('scroll', () => {
 
 // Init
 window.addEventListener('DOMContentLoaded', loadData);
+
+// Global Search and Filter functions
+window.handleSearchKey = function(event) {
+    if (event.key === 'Enter') handleSearchClick();
+}
+
+window.handleSearchClick = function() {
+    const input = document.getElementById('searchInput');
+    if(input) {
+        const val = input.value.trim();
+        if(val) navigate('products', null, val);
+    }
+}
+
+window.toggleMobileFilter = function() {
+    const list = document.getElementById('filter-list');
+    const icon = document.getElementById('filter-chevron');
+    if (!list) return;
+    if (list.classList.contains('collapsed-mobile')) {
+        list.classList.remove('collapsed-mobile');
+        if(icon) icon.className = 'fas fa-chevron-up mobile-only-icon';
+    } else {
+        list.classList.add('collapsed-mobile');
+        if(icon) icon.className = 'fas fa-chevron-down mobile-only-icon';
+    }
+}
+
+window.closeMobileFilter = function() {
+    if(window.innerWidth <= 768) {
+        const list = document.getElementById('filter-list');
+        const icon = document.getElementById('filter-chevron');
+        if (list) list.classList.add('collapsed-mobile');
+        if (icon) icon.className = 'fas fa-chevron-down mobile-only-icon';
+    }
+}

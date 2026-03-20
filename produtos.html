@@ -24,6 +24,10 @@
                 <i class="fas fa-bars"></i>
             </button>
             <nav class="nav-links" id="nav-links">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Buscar produtos..." onkeypress="handleSearchKey(event)">
+                    <button class="search-btn" onclick="handleSearchClick()"><i class="fas fa-search"></i></button>
+                </div>
                 <a href="index.html" onclick="event.preventDefault(); navigate('home')">Início</a>
                 <a href="produtos.html" onclick="event.preventDefault(); navigate('products')">Produtos</a>
                 <a href="contato.html">Contato</a>

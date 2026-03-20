@@ -26,7 +26,6 @@
             background: white;
             border-radius: 12px;
             box-shadow: var(--shadow);
-            border-left: 5px solid var(--primary);
         }
 
         .contact-info h2 {
@@ -77,6 +76,10 @@
             </a>
             <!-- Desktop Nav needs spacing adjustment without JS toggle if static or we handle strictly responsive -->
             <nav class="nav-links" id="nav-links" style="display:flex;">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Buscar produtos..." onkeypress="handleSearchKey(event)">
+                    <button class="search-btn" onclick="handleSearchClick()"><i class="fas fa-search"></i></button>
+                </div>
                 <a href="index.html">Início</a>
                 <a href="produtos.html">Produtos</a>
                 <a href="contato.html" class="active">Contato</a>
@@ -104,10 +107,13 @@
                     <p><i class="far fa-clock"></i> Atendimento de segunda a sexta-feira, de 7:30 às 17 h e sábados de 9 às 12 h</p>
                 </div>
                 <div class="contact-map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119932.19363065608!2d-44.084776!3d-19.957648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDU3JzI3LjUiUyA0NMKwMDUnMDUuMiJX!5e0!3m2!1spt-BR!2sbr!4v1684849204392!5m2!1spt-BR!2sbr"
-                        style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Rua+Quarenta+e+Dois,+690+Tropical,+Contagem" target="_blank" style="display: block; position: relative;">
+                        <div style="position: absolute; top:0; left:0; width:100%; height:100%; z-index: 10; cursor: pointer;"></div>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119932.19363065608!2d-44.084776!3d-19.957648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDU3JzI3LjUiUyA0NMKwMDUnMDUuMiJX!5e0!3m2!1spt-BR!2sbr!4v1684849204392!5m2!1spt-BR!2sbr"
+                            style="border:0; pointer-events: none;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </a>
                 </div>
             </div>
         </section>
@@ -138,6 +144,17 @@
     <a href="https://wa.me/5531985082038" target="_blank" class="float-wpp" title="Fale conosco no WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
+    <script>
+        function handleSearchKey(event) {
+            if (event.key === 'Enter') handleSearchClick();
+        }
+        function handleSearchClick() {
+            let input = document.getElementById('searchInput');
+            if(input && input.value.trim()){
+                window.location.href = 'produtos.html?search=' + encodeURIComponent(input.value.trim());
+            }
+        }
+    </script>
 </body>
 
 </html>
