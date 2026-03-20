@@ -168,15 +168,18 @@ function renderHome(container) {
       <div class="container">
         <h2 class="section-title">Produtos em Destaque</h2>
         <div class="products-grid">
-          ${highlights.map((p, i) => `
-            <div class="product-card" onclick="navigate('product', ${i})">
+          ${highlights.map((p, i) => {
+            const idx = productsData.indexOf(p);
+            return `
+            <div class="product-card" onclick="navigate('product', ${idx})">
               <img src="${p.image || 'https://via.placeholder.com/300x250?text=Sem+Foto'}" class="product-img" alt="${p.title}" onerror="this.src='https://via.placeholder.com/300x250?text=Sem+Foto'">
               <div class="product-info">
                 <span class="product-category">${classifyCategory(p.title)}</span>
                 <h3 class="product-title">${p.title}</h3>
               </div>
             </div>
-          `).join('')}
+          `;
+          }).join('')}
         </div>
         <div class="see-all-container">
           <button class="btn btn-outline" style="color:var(--primary);border-color:var(--primary)" onclick="navigate('products')">Ver todos os produtos</button>
