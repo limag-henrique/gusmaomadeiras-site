@@ -459,9 +459,7 @@ function renderProductDetail(container, productId) {
     ? `
       <div class="gallery-switcher">
         ${galleryImages.map((item, index) => `
-          <button type="button" class="gallery-choice ${index === 0 ? "active" : ""}" onclick="setProductDetailImage(${index})" aria-label="${item.type === "ai" ? "Imagem IA em ambiente" : "Fotos originais"}">
-            ${item.type === "ai" ? "Imagem IA em ambiente" : "Fotos originais"}
-          </button>
+          <button type="button" class="gallery-choice ${index === 0 ? "active" : ""}" onclick="setProductDetailImage(${index})" aria-label="Ver imagem ${index + 1}" aria-current="${index === 0 ? "true" : "false"}"></button>
         `).join("")}
       </div>
     `
@@ -556,6 +554,7 @@ function setProductDetailImage(index) {
 
   document.querySelectorAll(".gallery-choice").forEach((btn, i) => {
     btn.classList.toggle("active", i === index);
+    btn.setAttribute("aria-current", i === index ? "true" : "false");
   });
 }
 
