@@ -182,6 +182,10 @@ function WppLink(productName) {
   return `https://wa.me/${wppNumber}?text=${msg}`;
 }
 
+function getProductDetailHref(idx) {
+  return `produtos.html#product?id=${idx}`;
+}
+
 function renderProductCard(product) {
   const idx = productsData.indexOf(product);
   const productImage = product.image || "https://via.placeholder.com/300x250?text=Sem+Foto";
@@ -191,7 +195,7 @@ function renderProductCard(product) {
     : "";
 
   return `
-    <article class="product-card ${usageImage ? "has-ai-preview" : ""}" onclick="navigate('product', ${idx})" tabindex="0" onkeydown="handleCardKey(event, ${idx})">
+    <a class="product-card ${usageImage ? "has-ai-preview" : ""}" href="${getProductDetailHref(idx)}" onclick="handleProductCardClick(event, ${idx})">
       <div class="product-img-wrap">
         <img src="${productImage}" class="product-img product-img-original" alt="${product.title}" onerror="this.src='https://via.placeholder.com/300x250?text=Sem+Foto'">
         ${aiPreview}
@@ -203,7 +207,7 @@ function renderProductCard(product) {
           <span class="product-action details">Ver detalhes</span>
         </div>
       </div>
-    </article>
+    </a>
   `;
 }
 
@@ -454,8 +458,10 @@ function renderProductDetail(container, productId) {
   const switcherHtml = galleryImages.length > 1
     ? `
       <div class="gallery-switcher">
-        ${galleryImages.map((_, index) => `
-          <button type="button" class="gallery-dot ${index === 0 ? "active" : ""}" onclick="setProductDetailImage(${index})" aria-label="Foto ${index + 1}"></button>
+        ${galleryImages.map((item, index) => `
+          <button type="button" class="gallery-choice ${index === 0 ? "active" : ""}" onclick="setProductDetailImage(${index})" aria-label="${item.type === "ai" ? "Imagem IA em ambiente" : "Fotos originais"}">
+            ${item.type === "ai" ? "Imagem IA em ambiente" : "Fotos originais"}
+          </button>
         `).join("")}
       </div>
     `
@@ -488,7 +494,7 @@ function renderProductDetail(container, productId) {
         <div class="product-detail-layout">
           <div class="product-detail-gallery">
             <div class="product-detail-main-image" onpointerdown="startProductGallerySwipe(event)" onpointerup="endProductGallerySwipe(event)" onpointercancel="cancelProductGallerySwipe()">
-              <img id="product-main-image" src="${galleryImages[0].src}" alt="${galleryImages[0].alt}" data-gallery="${galleryPayload}" data-index="0" onclick="handleProductImageClick(event, this)" onerror="this.src='https://via.placeholder.com/600x600?text=Sem+Foto'">
+              <img id="product-main-image" src="${galleryImages[0].src}" alt="${galleryImages[0].alt}" data-gallery="${galleryPayload}" data-index="0" data-view-type="${galleryImages[0].type}" onclick="handleProductImageClick(event, this)" onerror="this.src='https://via.placeholder.com/600x600?text=Sem+Foto'">
               ${arrowsHtml}
             </div>
             ${switcherHtml}
@@ -546,8 +552,9 @@ function setProductDetailImage(index) {
   image.src = selected.src;
   image.alt = selected.alt;
   image.dataset.index = String(index);
+  image.dataset.viewType = selected.type || "original";
 
-  document.querySelectorAll(".gallery-dot").forEach((btn, i) => {
+  document.querySelectorAll(".gallery-choice").forEach((btn, i) => {
     btn.classList.toggle("active", i === index);
   });
 }
@@ -581,6 +588,8 @@ function handleProductImageClick(event, image) {
 }
 
 function startProductGallerySwipe(event) {
+  if (isProductGalleryControl(event.target)) return;
+
   const gallery = readProductGallery();
   if (gallery.length <= 1) return;
 
@@ -613,6 +622,17 @@ function endProductGallerySwipe(event) {
 function cancelProductGallerySwipe() {
   productGallerySwipeStart = null;
 }
+
+function isProductGalleryControl(target) {
+  return target?.closest?.(".gallery-arrow, .gallery-choice");
+}
+
+window.setProductDetailImage = setProductDetailImage;
+window.previousProductDetailImage = previousProductDetailImage;
+window.nextProductDetailImage = nextProductDetailImage;
+window.startProductGallerySwipe = startProductGallerySwipe;
+window.endProductGallerySwipe = endProductGallerySwipe;
+window.cancelProductGallerySwipe = cancelProductGallerySwipe;
 
 function toggleMenu() {
   const nav = document.getElementById("nav-links");
@@ -649,11 +669,13 @@ window.handleSearchClick = function () {
   if (val) navigate("products", null, val);
 };
 
-window.handleCardKey = function (event, idx) {
-  if (event.key === "Enter" || event.key === " ") {
-    event.preventDefault();
-    navigate("product", idx);
+window.handleProductCardClick = function (event, idx) {
+  if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+    return;
   }
+
+  event.preventDefault();
+  navigate("product", idx);
 };
 
 window.toggleMobileFilter = function () {
