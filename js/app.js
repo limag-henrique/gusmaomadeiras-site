@@ -141,6 +141,29 @@ function getProductLine(title) {
   return 'Linha Tradicional';
 }
 
+function renderProductCard(product) {
+  const idx = productsData.indexOf(product);
+  const productImage = product.image || 'https://via.placeholder.com/300x250?text=Sem+Foto';
+  const usageImage = product.aiImage || '';
+  const aiPreview = usageImage ? `
+        <img src="${usageImage}" class="product-img product-img-ai" alt="${product.title} em uso real gerado por IA" onerror="this.style.display='none'">
+        <span class="ai-badge">Em uso com IA</span>
+      ` : '';
+
+  return `
+    <div class="product-card" onclick="navigate('product', ${idx})">
+      <div class="product-img-wrap">
+        <img src="${productImage}" class="product-img product-img-original" alt="${product.title}" onerror="this.src='https://via.placeholder.com/300x250?text=Sem+Foto'">
+        ${aiPreview}
+      </div>
+      <div class="product-info">
+        <span class="product-category">${getCategoryName(classifyCategory(product.title))}</span>
+        <h3 class="product-title">${product.title}</h3>
+      </div>
+    </div>
+  `;
+}
+
 function WppLink(productName) {
   const msg = encodeURIComponent(`Olá! Gostaria de solicitar um orçamento para o produto: ${productName}. Podem me passar mais informações?`);
   return `https://wa.me/${wppNumber}?text=${msg}`;
@@ -154,12 +177,12 @@ function renderHome(container) {
       <video id="hero-bg-video" autoplay muted loop playsinline preload="metadata" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
           <source src="Images/video.webm" type="video/webm">
       </video>
-      <!-- Dark overlay 45% -->
-      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.45); z-index: 1;"></div>
+      <!-- Modern gradient overlay -->
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(45, 55, 72, 0.85) 0%, rgba(45, 55, 72, 0.4) 100%); z-index: 1;"></div>
       
       <div class="container hero-content" style="position: relative; z-index: 2; color: white;">
-        <h1 style="font-size: 3rem; margin-bottom: 20px; font-weight: 700;">Produtos que duram gerações</h1>
-        <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">Madeiras de alta qualidade para construir os melhores momentos da sua vida. Conheça nossa linha completa de portas, janelas e acabamentos.</p>
+        <h1 style="font-size: 3.5rem; margin-bottom: 20px; font-weight: 700; line-height: 1.2;">Produtos que duram gerações</h1>
+        <p style="font-size: 1.25rem; margin-bottom: 40px; opacity: 0.95; max-width: 800px; margin-left: auto; margin-right: auto;">Madeiras de alta qualidade para construir os melhores momentos da sua vida. Conheça nossa linha completa de portas, janelas e acabamentos.</p>
         <button class="btn btn-white-red" onclick="navigate('products')">Ver Produtos</button>
       </div>
     </section>
@@ -189,18 +212,7 @@ function renderHome(container) {
       <div class="container">
         <h2 class="section-title">Produtos em Destaque</h2>
         <div class="products-grid">
-          ${highlights.map((p, i) => {
-            const idx = productsData.indexOf(p);
-            return `
-            <div class="product-card" onclick="navigate('product', ${idx})">
-              <img src="${p.image || 'https://via.placeholder.com/300x250?text=Sem+Foto'}" class="product-img" alt="${p.title}" onerror="this.src='https://via.placeholder.com/300x250?text=Sem+Foto'">
-              <div class="product-info">
-                <span class="product-category">${getCategoryName(classifyCategory(p.title))}</span>
-                <h3 class="product-title">${p.title}</h3>
-              </div>
-            </div>
-          `;
-          }).join('')}
+          ${highlights.map(p => renderProductCard(p)).join('')}
         </div>
         <div class="see-all-container">
           <button class="btn btn-outline" style="color:var(--primary);border-color:var(--primary)" onclick="navigate('products')">Ver todos os produtos</button>
@@ -270,17 +282,7 @@ function renderProducts(container, categoryId, searchQuery) {
 
   const gridHtml = `
       <div class="products-grid">
-        ${filtered.map(p => {
-    const idx = productsData.indexOf(p);
-    return `
-          <div class="product-card" onclick="navigate('product', ${idx})">
-            <img src="${p.image || 'https://via.placeholder.com/300x250?text=Sem+Foto'}" class="product-img" alt="${p.title}" onerror="this.src='https://via.placeholder.com/300x250?text=Sem+Foto'">
-            <div class="product-info">
-              <span class="product-category">${getCategoryName(classifyCategory(p.title))}</span>
-              <h3 class="product-title">${p.title}</h3>
-            </div>
-          </div>
-        `}).join('')}
+        ${filtered.map(p => renderProductCard(p)).join('')}
       </div>
     `;
   gridContainer.innerHTML = gridHtml;
@@ -293,6 +295,38 @@ function renderProductDetail(container, productId) {
     return;
   }
 
+  const galleryImages = [
+    {
+      type: 'original',
+      label: 'Foto do produto',
+      icon: 'fa-image',
+      src: p.image || 'https://via.placeholder.com/600x600?text=Sem+Foto',
+      alt: p.title
+    }
+  ];
+
+  if (p.aiImage) {
+    galleryImages.push({
+      type: 'ai',
+      label: 'Em uso com IA',
+      icon: 'fa-house',
+      src: p.aiImage,
+      alt: `${p.title} em uso real gerado por IA`
+    });
+  }
+
+  const galleryPayload = encodeURIComponent(JSON.stringify(galleryImages));
+  const switcherHtml = galleryImages.length > 1 ? `
+              <div class="gallery-switcher" role="group" aria-label="Alternar foto do produto">
+                ${galleryImages.map((image, index) => `
+                  <button type="button" class="gallery-switch ${index === 0 ? 'active' : ''}" onclick="setProductDetailImage(${index}, this)">
+                    <i class="fas ${image.icon}"></i>
+                    <span>${image.label}</span>
+                  </button>
+                `).join('')}
+              </div>
+            ` : '';
+
   const html = `
       <section class="section-white">
         <div class="container">
@@ -301,7 +335,10 @@ function renderProductDetail(container, productId) {
           </a>
           <div class="product-detail-layout">
             <div class="product-detail-gallery">
-              <img src="${p.image || 'https://via.placeholder.com/600x600?text=Sem+Foto'}" alt="${p.title}" onerror="this.src='https://via.placeholder.com/600x600?text=Sem+Foto'">
+              <div class="product-detail-main-image">
+                <img id="product-main-image" src="${galleryImages[0].src}" alt="${galleryImages[0].alt}" data-gallery="${galleryPayload}" data-index="0" onclick="nextProductDetailImage()" onerror="this.src='https://via.placeholder.com/600x600?text=Sem+Foto'">
+              </div>
+              ${switcherHtml}
             </div>
             <div class="product-detail-info">
               <span class="product-category">${getCategoryName(classifyCategory(p.title))}</span>
@@ -323,6 +360,41 @@ function renderProductDetail(container, productId) {
       </section>
     `;
   container.innerHTML = html;
+}
+
+function readProductGallery() {
+  const image = document.getElementById('product-main-image');
+  if (!image) return [];
+
+  try {
+    return JSON.parse(decodeURIComponent(image.dataset.gallery || '[]'));
+  } catch (e) {
+    return [];
+  }
+}
+
+function setProductDetailImage(index, button) {
+  const image = document.getElementById('product-main-image');
+  const gallery = readProductGallery();
+  const selected = gallery[index];
+  if (!image || !selected) return;
+
+  image.src = selected.src;
+  image.alt = selected.alt;
+  image.dataset.index = String(index);
+
+  document.querySelectorAll('.gallery-switch').forEach(btn => btn.classList.remove('active'));
+  if (button) button.classList.add('active');
+}
+
+function nextProductDetailImage() {
+  const image = document.getElementById('product-main-image');
+  const gallery = readProductGallery();
+  if (!image || gallery.length <= 1) return;
+
+  const nextIndex = (Number(image.dataset.index || 0) + 1) % gallery.length;
+  const button = document.querySelectorAll('.gallery-switch')[nextIndex];
+  setProductDetailImage(nextIndex, button);
 }
 
 // Utils
