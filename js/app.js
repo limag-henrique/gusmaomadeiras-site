@@ -12,18 +12,18 @@ const categoriesData = [
 ];
 
 const heroFloatingProducts = [
-  { src: "Images/hero-floating/porta-101-estruturada.png", alt: "Porta de angelim estruturada", shape: "door" },
-  { src: "Images/hero-floating/janela-41-panoramica.png", alt: "Janela panoramica de correr", shape: "wide" },
-  { src: "Images/hero-floating/porta-53-panoramica.png", alt: "Marco panoramico de angelim", shape: "door" },
-  { src: "Images/hero-floating/porta-correr-04-tucano.png", alt: "Porta de correr tucano", shape: "wide" },
-  { src: "Images/hero-floating/janela-10-correr.png", alt: "Janela dupla de correr", shape: "wide" },
-  { src: "Images/hero-floating/porta-36-bigbrother.png", alt: "Porta BigBrother espacada", shape: "door" },
-  { src: "Images/hero-floating/bascula-15-panoramica.png", alt: "Bascula panoramica", shape: "square" },
-  { src: "Images/hero-floating/janela-32-napoleao.png", alt: "Janela napoleao de vidro", shape: "wide" },
-  { src: "Images/hero-floating/porta-17-almofadas.png", alt: "Porta dez almofadas", shape: "door" },
-  { src: "Images/hero-floating/seteira-17-panoramica.png", alt: "Seteira panoramica", shape: "door" },
-  { src: "Images/hero-floating/janela-05-vidro-almofada.png", alt: "Janela vidro e almofada", shape: "wide" },
-  { src: "Images/hero-floating/marco-10-vidro-diagonal.png", alt: "Marco vidro diagonal", shape: "door" }
+  { src: "Images/hero-floating/porta-101-estruturada.webp", alt: "Porta de angelim estruturada", shape: "door" },
+  { src: "Images/hero-floating/janela-41-panoramica.webp", alt: "Janela panoramica de correr", shape: "wide" },
+  { src: "Images/hero-floating/porta-53-panoramica.webp", alt: "Marco panoramico de angelim", shape: "door" },
+  { src: "Images/hero-floating/porta-correr-04-tucano.webp", alt: "Porta de correr tucano", shape: "wide" },
+  { src: "Images/hero-floating/janela-10-correr.webp", alt: "Janela dupla de correr", shape: "wide" },
+  { src: "Images/hero-floating/porta-36-bigbrother.webp", alt: "Porta BigBrother espacada", shape: "door" },
+  { src: "Images/hero-floating/bascula-15-panoramica.webp", alt: "Bascula panoramica", shape: "square" },
+  { src: "Images/hero-floating/janela-32-napoleao.webp", alt: "Janela napoleao de vidro", shape: "wide" },
+  { src: "Images/hero-floating/porta-17-almofadas.webp", alt: "Porta dez almofadas", shape: "door" },
+  { src: "Images/hero-floating/seteira-17-panoramica.webp", alt: "Seteira panoramica", shape: "door" },
+  { src: "Images/hero-floating/janela-05-vidro-almofada.webp", alt: "Janela vidro e almofada", shape: "wide" },
+  { src: "Images/hero-floating/marco-10-vidro-diagonal.webp", alt: "Marco vidro diagonal", shape: "door" }
 ];
 
 async function loadData() {
