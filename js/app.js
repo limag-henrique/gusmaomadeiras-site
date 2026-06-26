@@ -11,6 +11,21 @@ const categoriesData = [
   { id: "correr", name: "Porta de Correr", icon: "fa-door-open" }
 ];
 
+const heroFloatingProducts = [
+  { src: "Images/hero-floating/porta-101-estruturada.png", alt: "Porta de angelim estruturada", shape: "door" },
+  { src: "Images/hero-floating/janela-41-panoramica.png", alt: "Janela panoramica de correr", shape: "wide" },
+  { src: "Images/hero-floating/porta-53-panoramica.png", alt: "Marco panoramico de angelim", shape: "door" },
+  { src: "Images/hero-floating/porta-correr-04-tucano.png", alt: "Porta de correr tucano", shape: "wide" },
+  { src: "Images/hero-floating/janela-10-correr.png", alt: "Janela dupla de correr", shape: "wide" },
+  { src: "Images/hero-floating/porta-36-bigbrother.png", alt: "Porta BigBrother espacada", shape: "door" },
+  { src: "Images/hero-floating/bascula-15-panoramica.png", alt: "Bascula panoramica", shape: "square" },
+  { src: "Images/hero-floating/janela-32-napoleao.png", alt: "Janela napoleao de vidro", shape: "wide" },
+  { src: "Images/hero-floating/porta-17-almofadas.png", alt: "Porta dez almofadas", shape: "door" },
+  { src: "Images/hero-floating/seteira-17-panoramica.png", alt: "Seteira panoramica", shape: "door" },
+  { src: "Images/hero-floating/janela-05-vidro-almofada.png", alt: "Janela vidro e almofada", shape: "wide" },
+  { src: "Images/hero-floating/marco-10-vidro-diagonal.png", alt: "Marco vidro diagonal", shape: "door" }
+];
+
 async function loadData() {
   try {
     const res = await fetch("data.json");
@@ -64,6 +79,7 @@ function handleRoute() {
   }
 
   clearInterval(window.autoToggleInterval);
+  stopHeroFloatMotion();
 
   const app = document.getElementById("app");
   app.style.opacity = "0";
@@ -171,8 +187,7 @@ function renderProductCard(product) {
   const productImage = product.image || "https://via.placeholder.com/300x250?text=Sem+Foto";
   const usageImage = product.aiImage || "";
   const aiPreview = usageImage
-    ? `<img src="${usageImage}" class="product-img product-img-ai" alt="${product.title} em uso" onerror="this.style.display='none'">
-       <span class="ai-badge">Foto em uso</span>`
+    ? `<img src="${usageImage}" class="product-img product-img-ai" alt="${product.title}" onerror="this.style.display='none'">`
     : "";
 
   return `
@@ -193,12 +208,23 @@ function renderProductCard(product) {
 }
 
 function renderHome(container) {
+  const floatingProductsHtml = heroFloatingProducts.map((product, index) => `
+    <figure class="hero-float-item" data-shape="${product.shape}" style="--i: ${index}">
+      <img class="hero-float-img" src="${product.src}" alt="${product.alt}" loading="${index < 5 ? "eager" : "lazy"}" decoding="async">
+    </figure>
+  `).join("");
+
   const heroHtml = `
     <section id="hero-slider" class="hero-slider">
       <video id="hero-bg-video" class="hero-bg-video" autoplay muted loop playsinline preload="metadata">
         <source src="Images/video.webm" type="video/webm">
       </video>
       <div class="hero-overlay"></div>
+      <div class="hero-product-stage" aria-hidden="true">
+        <div class="hero-product-orbit" id="hero-product-orbit">
+          ${floatingProductsHtml}
+        </div>
+      </div>
       <div class="container hero-shell">
         <div class="hero-copy">
           <h1>Produtos que duram gerações</h1>
@@ -258,6 +284,63 @@ function renderHome(container) {
   `;
 
   container.innerHTML = heroHtml + catHtml + prodHtml;
+  initHeroFloatMotion();
+}
+
+function stopHeroFloatMotion() {
+  if (window.heroFloatMotionFrame) {
+    cancelAnimationFrame(window.heroFloatMotionFrame);
+    window.heroFloatMotionFrame = null;
+  }
+}
+
+function initHeroFloatMotion() {
+  stopHeroFloatMotion();
+
+  const hero = document.getElementById("hero-slider");
+  const orbit = document.getElementById("hero-product-orbit");
+  if (!hero || !orbit) return;
+
+  const items = Array.from(orbit.querySelectorAll(".hero-float-item"));
+  const reducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+  const itemCount = items.length || 1;
+
+  const renderFrame = (time = 0) => {
+    const rect = hero.getBoundingClientRect();
+    const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 1;
+    const visible = rect.bottom > -viewportHeight * 0.2 && rect.top < viewportHeight * 1.2;
+    const orbitRect = orbit.getBoundingClientRect();
+    const orbitWidth = Math.max(orbitRect.width, 1);
+    const orbitHeight = Math.max(orbitRect.height, 1);
+    const isMobile = window.innerWidth < 760;
+    const rx = orbitWidth * (isMobile ? 0.42 : 0.46);
+    const ry = orbitHeight * (isMobile ? 0.24 : 0.3);
+    const progress = reducedMotion ? 0.12 : time * 0.000055;
+
+    items.forEach((item, index) => {
+      const phase = ((index / itemCount) + progress) % 1;
+      const angle = phase * Math.PI * 2;
+      const xBase = Math.cos(angle) * rx;
+      const yBase = Math.sin(angle) * ry + Math.cos(angle * 2) * (isMobile ? 10 : 24);
+      const depth = (Math.sin(angle) + 1) / 2;
+      const scale = (isMobile ? 0.5 : 0.44) + depth * (isMobile ? 0.42 : 0.5);
+      const opacity = 0.2 + depth * 0.8;
+      const rotate = Math.cos(angle) * (isMobile ? 7 : 10);
+      const blur = Math.max(0, (1 - depth) * 1.5);
+      const shadow = 0.18 + depth * 0.2;
+
+      item.style.zIndex = String(Math.round(depth * 100));
+      item.style.opacity = opacity.toFixed(3);
+      item.style.filter = `blur(${blur.toFixed(2)}px) drop-shadow(0 ${Math.round(18 + depth * 20)}px ${Math.round(24 + depth * 34)}px rgba(0, 0, 0, ${shadow.toFixed(2)}))`;
+      item.style.transform = `translate3d(calc(-50% + ${xBase.toFixed(2)}px), calc(-50% + ${yBase.toFixed(2)}px), 0) scale(${scale.toFixed(3)}) rotate(${rotate.toFixed(2)}deg)`;
+    });
+
+    if (!reducedMotion || visible) {
+      window.heroFloatMotionFrame = requestAnimationFrame(renderFrame);
+    }
+  };
+
+  renderFrame();
 }
 
 function getResultsTitle(categoryId, searchQuery) {
@@ -363,7 +446,7 @@ function renderProductDetail(container, productId) {
     galleryImages.push({
       type: "ai",
       src: p.aiImage,
-      alt: `${p.title} em uso`
+      alt: p.title
     });
   }
 
@@ -375,6 +458,17 @@ function renderProductDetail(container, productId) {
           <button type="button" class="gallery-dot ${index === 0 ? "active" : ""}" onclick="setProductDetailImage(${index})" aria-label="Foto ${index + 1}"></button>
         `).join("")}
       </div>
+    `
+    : "";
+
+  const arrowsHtml = galleryImages.length > 1
+    ? `
+      <button type="button" class="gallery-arrow gallery-arrow-prev" onclick="event.stopPropagation(); previousProductDetailImage()" aria-label="Foto anterior">
+        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="gallery-arrow gallery-arrow-next" onclick="event.stopPropagation(); nextProductDetailImage()" aria-label="Próxima foto">
+        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+      </button>
     `
     : "";
 
@@ -393,8 +487,9 @@ function renderProductDetail(container, productId) {
         </a>
         <div class="product-detail-layout">
           <div class="product-detail-gallery">
-            <div class="product-detail-main-image">
-              <img id="product-main-image" src="${galleryImages[0].src}" alt="${galleryImages[0].alt}" data-gallery="${galleryPayload}" data-index="0" onclick="openLightbox(this.src)" onerror="this.src='https://via.placeholder.com/600x600?text=Sem+Foto'">
+            <div class="product-detail-main-image" onpointerdown="startProductGallerySwipe(event)" onpointerup="endProductGallerySwipe(event)" onpointercancel="cancelProductGallerySwipe()">
+              <img id="product-main-image" src="${galleryImages[0].src}" alt="${galleryImages[0].alt}" data-gallery="${galleryPayload}" data-index="0" onclick="handleProductImageClick(event, this)" onerror="this.src='https://via.placeholder.com/600x600?text=Sem+Foto'">
+              ${arrowsHtml}
             </div>
             ${switcherHtml}
           </div>
@@ -428,6 +523,9 @@ function renderProductDetail(container, productId) {
   `;
 }
 
+let productGallerySwipeStart = null;
+let productGallerySwipeHandledAt = 0;
+
 function readProductGallery() {
   const image = document.getElementById("product-main-image");
   if (!image) return [];
@@ -454,6 +552,16 @@ function setProductDetailImage(index) {
   });
 }
 
+function previousProductDetailImage() {
+  const image = document.getElementById("product-main-image");
+  const gallery = readProductGallery();
+  if (!image || gallery.length <= 1) return;
+
+  const currentIndex = Number(image.dataset.index || 0);
+  const previousIndex = (currentIndex - 1 + gallery.length) % gallery.length;
+  setProductDetailImage(previousIndex);
+}
+
 function nextProductDetailImage() {
   const image = document.getElementById("product-main-image");
   const gallery = readProductGallery();
@@ -461,6 +569,49 @@ function nextProductDetailImage() {
 
   const nextIndex = (Number(image.dataset.index || 0) + 1) % gallery.length;
   setProductDetailImage(nextIndex);
+}
+
+function handleProductImageClick(event, image) {
+  if (Date.now() - productGallerySwipeHandledAt < 350) {
+    event.preventDefault();
+    return;
+  }
+
+  openLightbox(image.src);
+}
+
+function startProductGallerySwipe(event) {
+  const gallery = readProductGallery();
+  if (gallery.length <= 1) return;
+
+  event.currentTarget.setPointerCapture?.(event.pointerId);
+
+  productGallerySwipeStart = {
+    x: event.clientX,
+    y: event.clientY
+  };
+}
+
+function endProductGallerySwipe(event) {
+  if (!productGallerySwipeStart) return;
+
+  const deltaX = event.clientX - productGallerySwipeStart.x;
+  const deltaY = event.clientY - productGallerySwipeStart.y;
+  const isHorizontalSwipe = Math.abs(deltaX) > 45 && Math.abs(deltaX) > Math.abs(deltaY) * 1.25;
+
+  cancelProductGallerySwipe();
+
+  if (!isHorizontalSwipe) return;
+
+  productGallerySwipeHandledAt = Date.now();
+  event.preventDefault();
+
+  if (deltaX < 0) nextProductDetailImage();
+  else previousProductDetailImage();
+}
+
+function cancelProductGallerySwipe() {
+  productGallerySwipeStart = null;
 }
 
 function toggleMenu() {
