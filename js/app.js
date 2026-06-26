@@ -146,12 +146,11 @@ function renderProductCard(product) {
   const productImage = product.image || 'https://via.placeholder.com/300x250?text=Sem+Foto';
   const usageImage = product.aiImage || '';
   const aiPreview = usageImage ? `
-        <img src="${usageImage}" class="product-img product-img-ai" alt="${product.title} em uso real gerado por IA" onerror="this.style.display='none'">
-        <span class="ai-badge">Em uso com IA</span>
+        <img src="${usageImage}" class="product-img product-img-ai" alt="${product.title} em uso" onerror="this.style.display='none'">
       ` : '';
 
   return `
-    <div class="product-card" onclick="navigate('product', ${idx})">
+    <div class="product-card ${usageImage ? 'has-ai-preview' : ''}" onclick="navigate('product', ${idx})">
       <div class="product-img-wrap">
         <img src="${productImage}" class="product-img product-img-original" alt="${product.title}" onerror="this.src='https://via.placeholder.com/300x250?text=Sem+Foto'">
         ${aiPreview}
@@ -298,7 +297,7 @@ function renderProductDetail(container, productId) {
   const galleryImages = [
     {
       type: 'original',
-      label: 'Foto do produto',
+      label: 'Fotos originais',
       icon: 'fa-image',
       src: p.image || 'https://via.placeholder.com/600x600?text=Sem+Foto',
       alt: p.title
@@ -308,24 +307,29 @@ function renderProductDetail(container, productId) {
   if (p.aiImage) {
     galleryImages.push({
       type: 'ai',
-      label: 'Em uso com IA',
+      label: 'Foto em uso',
       icon: 'fa-house',
       src: p.aiImage,
-      alt: `${p.title} em uso real gerado por IA`
+      alt: `${p.title} em uso`
     });
   }
 
   const galleryPayload = encodeURIComponent(JSON.stringify(galleryImages));
   const switcherHtml = galleryImages.length > 1 ? `
-              <div class="gallery-switcher" role="group" aria-label="Alternar foto do produto">
-                ${galleryImages.map((image, index) => `
-                  <button type="button" class="gallery-switch ${index === 0 ? 'active' : ''}" onclick="setProductDetailImage(${index}, this)">
-                    <i class="fas ${image.icon}"></i>
-                    <span>${image.label}</span>
-                  </button>
+              <div class="gallery-switcher" style="display: flex; justify-content: center; gap: 12px; margin-top: 15px;">
+                ${galleryImages.map((_, index) => `
+                  <button type="button" class="gallery-dot" onclick="setProductDetailImage(${index})" aria-label="Foto ${index + 1}" style="width: 16px; height: 16px; border-radius: 50%; background: ${index === 0 ? 'var(--primary)' : 'transparent'}; border: 2px solid var(--primary); cursor: pointer; transition: all 0.3s; padding: 0; box-sizing: border-box;"></button>
                 `).join('')}
               </div>
             ` : '';
+
+  if (galleryImages.length > 1) {
+    clearInterval(window.autoToggleInterval);
+    window.autoToggleInterval = setInterval(() => {
+      const image = document.getElementById('product-main-image');
+      if (image) nextProductDetailImage();
+    }, 3000);
+  }
 
   const html = `
       <section class="section-white">
@@ -336,7 +340,7 @@ function renderProductDetail(container, productId) {
           <div class="product-detail-layout">
             <div class="product-detail-gallery">
               <div class="product-detail-main-image">
-                <img id="product-main-image" src="${galleryImages[0].src}" alt="${galleryImages[0].alt}" data-gallery="${galleryPayload}" data-index="0" onclick="nextProductDetailImage()" onerror="this.src='https://via.placeholder.com/600x600?text=Sem+Foto'">
+                <img id="product-main-image" src="${galleryImages[0].src}" alt="${galleryImages[0].alt}" data-gallery="${galleryPayload}" data-index="0" onclick="openLightbox(this.src)" onerror="this.src='https://via.placeholder.com/600x600?text=Sem+Foto'">
               </div>
               ${switcherHtml}
             </div>
@@ -373,7 +377,7 @@ function readProductGallery() {
   }
 }
 
-function setProductDetailImage(index, button) {
+function setProductDetailImage(index) {
   const image = document.getElementById('product-main-image');
   const gallery = readProductGallery();
   const selected = gallery[index];
@@ -383,8 +387,13 @@ function setProductDetailImage(index, button) {
   image.alt = selected.alt;
   image.dataset.index = String(index);
 
-  document.querySelectorAll('.gallery-switch').forEach(btn => btn.classList.remove('active'));
-  if (button) button.classList.add('active');
+  document.querySelectorAll('.gallery-dot').forEach((btn, i) => {
+    if (i === index) {
+      btn.style.background = 'var(--primary)';
+    } else {
+      btn.style.background = 'transparent';
+    }
+  });
 }
 
 function nextProductDetailImage() {
@@ -393,8 +402,7 @@ function nextProductDetailImage() {
   if (!image || gallery.length <= 1) return;
 
   const nextIndex = (Number(image.dataset.index || 0) + 1) % gallery.length;
-  const button = document.querySelectorAll('.gallery-switch')[nextIndex];
-  setProductDetailImage(nextIndex, button);
+  setProductDetailImage(nextIndex);
 }
 
 // Utils
@@ -463,3 +471,42 @@ window.closeMobileFilter = function() {
         if (icon) icon.className = 'fas fa-chevron-down mobile-only-icon';
     }
 }
+
+// Lightbox functions
+window.openLightbox = function(src) {
+  let lightbox = document.getElementById('image-lightbox');
+  if (!lightbox) {
+    lightbox = document.createElement('div');
+    lightbox.id = 'image-lightbox';
+    lightbox.style.cssText = 'position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.9); display: flex; justify-content: center; align-items: center; z-index: 10000; cursor: pointer; opacity: 0; transition: opacity 0.3s;';
+    lightbox.onclick = window.closeLightbox;
+    
+    const img = document.createElement('img');
+    img.id = 'lightbox-img';
+    img.style.cssText = 'max-width: 90vw; max-height: 90vh; object-fit: contain; transform: scale(0.9); transition: transform 0.3s;';
+    
+    lightbox.appendChild(img);
+    document.body.appendChild(lightbox);
+  }
+  
+  const img = document.getElementById('lightbox-img');
+  img.src = src;
+  
+  lightbox.style.display = 'flex';
+  setTimeout(() => {
+    lightbox.style.opacity = '1';
+    img.style.transform = 'scale(1)';
+  }, 10);
+};
+
+window.closeLightbox = function() {
+  const lightbox = document.getElementById('image-lightbox');
+  if (lightbox) {
+    lightbox.style.opacity = '0';
+    const img = document.getElementById('lightbox-img');
+    if(img) img.style.transform = 'scale(0.9)';
+    setTimeout(() => {
+      lightbox.style.display = 'none';
+    }, 300);
+  }
+};
