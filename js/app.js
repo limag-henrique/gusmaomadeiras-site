@@ -141,7 +141,7 @@ function classifyCategory(productTitle) {
   const title = productTitle.toLowerCase();
   if (title.includes("marco") || title.includes("portal") || title.includes("alisar")) return "marcos";
   if (title.includes("seteira")) return "seteira";
-  if (title.includes("correr")) return "correr";
+  if (title.includes("porta de correr")) return "correr";
   if (title.includes("báscula") || title.includes("bascula")) return "bascula";
   if (title.includes("janela")) return "janela";
   if (title.includes("porta")) return "porta";
@@ -356,6 +356,7 @@ function getResultsTitle(categoryId, searchQuery) {
 function renderProducts(container, categoryId, searchQuery) {
   const bannerHtml = `
     <section class="page-hero">
+      <div class="page-hero-static-circle" aria-hidden="true"></div>
       <div class="container">
         <h1>Nossos Produtos</h1>
         <p>Filtre por linha, procure pelo modelo desejado e abra o detalhe para ver especificações e solicitar orçamento.</p>
