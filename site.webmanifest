@@ -1,0 +1,25 @@
+{
+  "name": "Gusmão Madeiras",
+  "short_name": "Gusmão",
+  "description": "Portas, janelas e madeiras em Angelim para obras e reformas.",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#8b1f1f",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "295x121",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32 48x48",
+      "type": "image/x-icon",
+      "purpose": "any"
+    }
+  ]
+}

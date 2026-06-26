@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.gusmaomadeiras.com.br/sitemap.xml
