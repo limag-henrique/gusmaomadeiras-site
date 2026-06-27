@@ -1,14 +1,78 @@
 // app.js - Main SPA routing and logic
 const wppNumber = "5531985082038";
 
+function iconSvg(id, body) {
+  return `
+    <svg id="${id}" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+      ${body}
+    </svg>
+  `;
+}
+
+function IconPortas() {
+  return iconSvg("icon-portas", `
+    <rect x="4" y="1.5" width="16" height="20.5" rx="1" />
+    <line x1="3" y1="22" x2="21" y2="22" />
+    <rect x="6.5" y="3.5" width="11" height="7" rx="0.5" />
+    <circle cx="15.5" cy="14.5" r="0.85" fill="currentColor" stroke="none" />
+  `);
+}
+
+function IconJanelas() {
+  return iconSvg("icon-janelas", `
+    <rect x="2.5" y="3.5" width="19" height="17" rx="1.5" />
+    <line x1="12" y1="3.5" x2="12" y2="20.5" />
+    <line x1="2.5" y1="12" x2="21.5" y2="12" />
+    <circle cx="5" cy="5.5" r="0.6" fill="currentColor" stroke="none" />
+    <circle cx="19" cy="5.5" r="0.6" fill="currentColor" stroke="none" />
+  `);
+}
+
+function IconBasculas() {
+  return iconSvg("icon-basculas", `
+    <rect x="2.5" y="3" width="19" height="18" rx="1.5" />
+    <line x1="5" y1="10.5" x2="19" y2="8" />
+    <line x1="5" y1="14.5" x2="19" y2="12" />
+    <line x1="5" y1="18.5" x2="19" y2="16" />
+  `);
+}
+
+function IconSeteiras() {
+  return iconSvg("icon-seteiras", `
+    <rect x="9" y="2" width="6" height="20" rx="3" />
+    <line x1="9.5" y1="12" x2="14.5" y2="12" />
+  `);
+}
+
+function IconAlisaresPortais() {
+  return iconSvg("icon-alisares-portais", `
+    <rect x="2" y="2" width="20" height="21" rx="1.5" />
+    <rect x="4.5" y="4.5" width="15" height="18.5" rx="1" />
+    <rect x="7" y="7" width="10" height="16" rx="0.5" />
+    <circle cx="14.5" cy="14.5" r="0.85" fill="currentColor" stroke="none" />
+  `);
+}
+
+function IconPortasCorrer() {
+  return iconSvg("icon-portas-correr", `
+    <rect x="1.5" y="3" width="21" height="2" rx="1" />
+    <rect x="2" y="5" width="12" height="17" rx="0.5" />
+    <rect x="10" y="5" width="12" height="17" rx="0.5" />
+    <line x1="9.5" y1="12" x2="9.5" y2="15.5" stroke-width="2" />
+    <line x1="14.5" y1="12" x2="14.5" y2="15.5" stroke-width="2" />
+    <polyline points="5,3 3.5,2 3.5,4" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" />
+    <polyline points="19,3 20.5,2 20.5,4" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" />
+  `);
+}
+
 let productsData = [];
 const categoriesData = [
-  { id: "porta", name: "Porta", icon: "fa-door-closed" },
-  { id: "janela", name: "Janela", icon: "fa-window-maximize" },
-  { id: "bascula", name: "Básculas", icon: "fa-layer-group" },
-  { id: "seteira", name: "Seteiras", icon: "fa-align-justify" },
-  { id: "marcos", name: "Marcos Portais Alisares", icon: "fa-ruler-combined" },
-  { id: "correr", name: "Porta de Correr", icon: "fa-door-open" }
+  { id: "porta", name: "Porta", icon: IconPortas() },
+  { id: "janela", name: "Janela", icon: IconJanelas() },
+  { id: "bascula", name: "Básculas", icon: IconBasculas() },
+  { id: "seteira", name: "Seteiras", icon: IconSeteiras() },
+  { id: "marcos", name: "Marcos Portais Alisares", icon: IconAlisaresPortais() },
+  { id: "correr", name: "Porta de Correr", icon: IconPortasCorrer() }
 ];
 
 const heroFloatingProducts = [
@@ -78,7 +142,6 @@ function handleRoute() {
     id = idParams.get("id");
   }
 
-  clearInterval(window.autoToggleInterval);
   stopHeroFloatMotion();
 
   const app = document.getElementById("app");
@@ -186,6 +249,11 @@ function getProductDetailHref(idx) {
   return `produtos.html#product?id=${idx}`;
 }
 
+function getGalleryChoiceLabel(item, index) {
+  if (item.type === "ai") return "IA em ambiente";
+  return index === 0 ? "Fotos originais" : `Original ${index + 1}`;
+}
+
 function renderProductCard(product) {
   const idx = productsData.indexOf(product);
   const productImage = product.image || "https://via.placeholder.com/300x250?text=Sem+Foto";
@@ -257,10 +325,25 @@ function renderHome(container) {
             <h2 class="section-title">Escolha por tipo de peça</h2>
           </div>
         </div>
+        <div class="catalog-scene" aria-label="Casa moderna com porta, janela, seteira e báscula clicáveis">
+          <img src="Images/catalogo-casa-madeira-interativa.webp" width="1672" height="941" alt="Casa moderna com porta, janela, seteira e báscula de madeira instaladas" loading="lazy" decoding="async">
+          <a href="produtos.html?categoryId=porta" class="catalog-scene-link catalog-scene-door" onclick="event.preventDefault(); navigate('products', 'porta')" aria-label="Ver portas">
+            <span class="catalog-scene-pin"><span class="catalog-scene-label">Porta</span></span>
+          </a>
+          <a href="produtos.html?categoryId=janela" class="catalog-scene-link catalog-scene-window" onclick="event.preventDefault(); navigate('products', 'janela')" aria-label="Ver janelas">
+            <span class="catalog-scene-pin"><span class="catalog-scene-label">Janela</span></span>
+          </a>
+          <a href="produtos.html?categoryId=seteira" class="catalog-scene-link catalog-scene-seteira" onclick="event.preventDefault(); navigate('products', 'seteira')" aria-label="Ver seteiras">
+            <span class="catalog-scene-pin"><span class="catalog-scene-label">Seteira</span></span>
+          </a>
+          <a href="produtos.html?categoryId=bascula" class="catalog-scene-link catalog-scene-bascula" onclick="event.preventDefault(); navigate('products', 'bascula')" aria-label="Ver básculas">
+            <span class="catalog-scene-pin"><span class="catalog-scene-label">Báscula</span></span>
+          </a>
+        </div>
         <div class="categories-grid">
           ${categoriesData.map((c) => `
             <a href="#" class="category-card" onclick="event.preventDefault(); navigate('products', '${c.id}')">
-              <i class="fas ${c.icon}"></i>
+              <span class="category-icon" aria-hidden="true">${c.icon}</span>
               <h3>${c.name}</h3>
             </a>
           `).join("")}
@@ -356,7 +439,7 @@ function getResultsTitle(categoryId, searchQuery) {
 function renderProducts(container, categoryId, searchQuery) {
   const bannerHtml = `
     <section class="page-hero">
-      <div class="page-hero-static-circle" aria-hidden="true"></div>
+      <img src="Images/janela-02a1-premium-transparent.png" alt="" class="page-hero-window-art" aria-hidden="true">
       <div class="container">
         <h1>Nossos Produtos</h1>
         <p>Filtre por linha, procure pelo modelo desejado e abra o detalhe para ver especificações e solicitar orçamento.</p>
@@ -455,12 +538,22 @@ function renderProductDetail(container, productId) {
     });
   }
 
+  if (Array.isArray(p.images)) {
+    p.images.forEach((src) => {
+      galleryImages.push({
+        type: "original",
+        src,
+        alt: p.title
+      });
+    });
+  }
+
   const galleryPayload = encodeURIComponent(JSON.stringify(galleryImages));
   const switcherHtml = galleryImages.length > 1
     ? `
       <div class="gallery-switcher">
         ${galleryImages.map((item, index) => `
-          <button type="button" class="gallery-choice ${index === 0 ? "active" : ""}" onclick="setProductDetailImage(${index})" aria-label="Ver imagem ${index + 1}" aria-current="${index === 0 ? "true" : "false"}"></button>
+          <button type="button" class="gallery-choice ${index === 0 ? "active" : ""}" onclick="setProductDetailImage(${index})" aria-label="Ver ${getGalleryChoiceLabel(item, index)}" aria-current="${index === 0 ? "true" : "false"}"></button>
         `).join("")}
       </div>
     `
@@ -477,13 +570,6 @@ function renderProductDetail(container, productId) {
     `
     : "";
 
-  if (galleryImages.length > 1) {
-    window.autoToggleInterval = setInterval(() => {
-      const image = document.getElementById("product-main-image");
-      if (image) nextProductDetailImage();
-    }, 3200);
-  }
-
   container.innerHTML = `
     <section class="section-white">
       <div class="container">
@@ -492,8 +578,8 @@ function renderProductDetail(container, productId) {
         </a>
         <div class="product-detail-layout">
           <div class="product-detail-gallery">
-            <div class="product-detail-main-image" onpointerdown="startProductGallerySwipe(event)" onpointerup="endProductGallerySwipe(event)" onpointercancel="cancelProductGallerySwipe()">
-              <img id="product-main-image" src="${galleryImages[0].src}" alt="${galleryImages[0].alt}" data-gallery="${galleryPayload}" data-index="0" data-view-type="${galleryImages[0].type}" onclick="handleProductImageClick(event, this)" onerror="this.src='https://via.placeholder.com/600x600?text=Sem+Foto'">
+            <div class="product-detail-main-image" onclick="handleProductImageClick(event)" onpointerdown="startProductGallerySwipe(event)" onpointerup="endProductGallerySwipe(event)" onpointercancel="cancelProductGallerySwipe()">
+              <img id="product-main-image" src="${galleryImages[0].src}" alt="${galleryImages[0].alt}" data-gallery="${galleryPayload}" data-index="0" data-view-type="${galleryImages[0].type}" onerror="handleProductGalleryImageError(this)">
               ${arrowsHtml}
             </div>
             ${switcherHtml}
@@ -559,6 +645,47 @@ function setProductDetailImage(index) {
   });
 }
 
+function updateProductGalleryControls(activeIndex) {
+  const gallery = readProductGallery();
+  const switcher = document.querySelector(".gallery-switcher");
+
+  if (switcher) {
+    if (gallery.length <= 1) {
+      switcher.remove();
+    } else {
+      switcher.innerHTML = gallery.map((item, index) => `
+        <button type="button" class="gallery-choice ${index === activeIndex ? "active" : ""}" onclick="setProductDetailImage(${index})" aria-label="Ver ${getGalleryChoiceLabel(item, index)}" aria-current="${index === activeIndex ? "true" : "false"}"></button>
+      `).join("");
+    }
+  }
+
+  document.querySelectorAll(".gallery-arrow").forEach((btn) => {
+    btn.hidden = gallery.length <= 1;
+  });
+}
+
+function handleProductGalleryImageError(image) {
+  const gallery = readProductGallery();
+  const failedIndex = Number(image.dataset.index || 0);
+  const nextGallery = gallery.filter((_, index) => index !== failedIndex);
+
+  image.dataset.gallery = encodeURIComponent(JSON.stringify(nextGallery));
+
+  if (!nextGallery.length) {
+    image.onerror = null;
+    image.src = "https://via.placeholder.com/600x600?text=Sem+Foto";
+    image.alt = "Produto sem foto";
+    image.dataset.index = "0";
+    image.dataset.viewType = "original";
+    updateProductGalleryControls(0);
+    return;
+  }
+
+  const nextIndex = Math.min(failedIndex, nextGallery.length - 1);
+  updateProductGalleryControls(nextIndex);
+  setProductDetailImage(nextIndex);
+}
+
 function previousProductDetailImage() {
   const image = document.getElementById("product-main-image");
   const gallery = readProductGallery();
@@ -578,13 +705,18 @@ function nextProductDetailImage() {
   setProductDetailImage(nextIndex);
 }
 
-function handleProductImageClick(event, image) {
+function handleProductImageClick(event) {
+  if (isProductGalleryControl(event.target)) return;
+
   if (Date.now() - productGallerySwipeHandledAt < 350) {
     event.preventDefault();
     return;
   }
 
-  openLightbox(image.src);
+  const image = document.getElementById("product-main-image");
+  if (!image) return;
+
+  openLightbox(image.currentSrc || image.src, image.alt);
 }
 
 function startProductGallerySwipe(event) {
@@ -628,11 +760,13 @@ function isProductGalleryControl(target) {
 }
 
 window.setProductDetailImage = setProductDetailImage;
+window.handleProductGalleryImageError = handleProductGalleryImageError;
 window.previousProductDetailImage = previousProductDetailImage;
 window.nextProductDetailImage = nextProductDetailImage;
 window.startProductGallerySwipe = startProductGallerySwipe;
 window.endProductGallerySwipe = endProductGallerySwipe;
 window.cancelProductGallerySwipe = cancelProductGallerySwipe;
+window.handleProductImageClick = handleProductImageClick;
 
 function toggleMenu() {
   const nav = document.getElementById("nav-links");
@@ -698,27 +832,46 @@ window.closeMobileFilter = function () {
   }
 };
 
-window.openLightbox = function (src) {
+window.openLightbox = function (src, alt) {
   let lightbox = document.getElementById("image-lightbox");
   if (!lightbox) {
     lightbox = document.createElement("div");
     lightbox.id = "image-lightbox";
+    lightbox.setAttribute("role", "dialog");
+    lightbox.setAttribute("aria-modal", "true");
+    lightbox.setAttribute("aria-label", "Imagem ampliada do produto");
     lightbox.onclick = window.closeLightbox;
+
+    const frame = document.createElement("div");
+    frame.id = "lightbox-frame";
+    frame.onclick = (event) => event.stopPropagation();
 
     const img = document.createElement("img");
     img.id = "lightbox-img";
 
-    lightbox.appendChild(img);
+    const closeButton = document.createElement("button");
+    closeButton.type = "button";
+    closeButton.id = "lightbox-close";
+    closeButton.setAttribute("aria-label", "Fechar imagem ampliada");
+    closeButton.innerHTML = "&times;";
+    closeButton.onclick = window.closeLightbox;
+
+    frame.appendChild(img);
+    frame.appendChild(closeButton);
+    lightbox.appendChild(frame);
     document.body.appendChild(lightbox);
   }
 
   const img = document.getElementById("lightbox-img");
   img.src = src;
+  img.alt = alt || "Imagem ampliada do produto";
   lightbox.style.display = "flex";
+  document.body.classList.add("lightbox-open");
 
   setTimeout(() => {
     lightbox.style.opacity = "1";
-    img.style.transform = "scale(1)";
+    document.getElementById("lightbox-frame")?.style.setProperty("transform", "scale(1)");
+    document.getElementById("lightbox-close")?.focus();
   }, 10);
 };
 
@@ -727,12 +880,17 @@ window.closeLightbox = function () {
   if (!lightbox) return;
 
   lightbox.style.opacity = "0";
-  const img = document.getElementById("lightbox-img");
-  if (img) img.style.transform = "scale(0.96)";
+  const frame = document.getElementById("lightbox-frame");
+  if (frame) frame.style.transform = "scale(0.96)";
 
   setTimeout(() => {
     lightbox.style.display = "none";
+    document.body.classList.remove("lightbox-open");
   }, 280);
 };
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") window.closeLightbox();
+});
 
 window.addEventListener("DOMContentLoaded", loadData);
