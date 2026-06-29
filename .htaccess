@@ -1,6 +1,7 @@
 RewriteEngine On
 
 # Old indexed URLs from Google -> current static pages.
+RewriteRule ^produtos/[^/]+/?$ /produtos.html [R=301,L,QSD]
 RewriteRule ^produtos/?$ /produtos.html [R=301,L,QSD]
 RewriteRule ^contato/?$ /contato.html [R=301,L,QSD]
 RewriteRule ^outlet/?$ /produtos.html?categoryId=porta [R=301,L]

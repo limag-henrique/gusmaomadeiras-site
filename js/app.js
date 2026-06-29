@@ -1,5 +1,6 @@
 // app.js - Main SPA routing and logic
 const wppNumber = "5531985082038";
+const siteOrigin = "https://www.gusmaomadeiras.com.br";
 
 function iconSvg(id, body) {
   return `
@@ -67,25 +68,25 @@ function IconPortasCorrer() {
 
 let productsData = [];
 const categoriesData = [
-  { id: "porta", name: "Porta", icon: IconPortas() },
-  { id: "janela", name: "Janela", icon: IconJanelas() },
-  { id: "bascula", name: "Básculas", icon: IconBasculas() },
-  { id: "seteira", name: "Seteiras", icon: IconSeteiras() },
-  { id: "marcos", name: "Marcos Portais Alisares", icon: IconAlisaresPortais() },
-  { id: "correr", name: "Porta de Correr", icon: IconPortasCorrer() }
+  { id: "porta", name: "Porta", pluralName: "Portas", icon: IconPortas() },
+  { id: "janela", name: "Janela", pluralName: "Janelas", icon: IconJanelas() },
+  { id: "bascula", name: "Básculas", pluralName: "Básculas", icon: IconBasculas() },
+  { id: "seteira", name: "Seteiras", pluralName: "Seteiras", icon: IconSeteiras() },
+  { id: "marcos", name: "Marcos Portais Alisares", pluralName: "Marcos, Portais e Alisares", icon: IconAlisaresPortais() },
+  { id: "correr", name: "Porta de Correr", pluralName: "Portas de Correr", icon: IconPortasCorrer() }
 ];
 
 const heroFloatingProducts = [
   { src: "Images/hero-floating/porta-101-estruturada.webp", alt: "Porta de angelim estruturada", shape: "door" },
-  { src: "Images/hero-floating/janela-41-panoramica.webp", alt: "Janela panoramica de correr", shape: "wide" },
-  { src: "Images/hero-floating/porta-53-panoramica.webp", alt: "Marco panoramico de angelim", shape: "door" },
+  { src: "Images/hero-floating/janela-41-panoramica.webp", alt: "Janela panorâmica de correr", shape: "wide" },
+  { src: "Images/hero-floating/porta-53-panoramica.webp", alt: "Marco panorâmico de angelim", shape: "door" },
   { src: "Images/hero-floating/porta-correr-04-tucano.webp", alt: "Porta de correr tucano", shape: "wide" },
   { src: "Images/hero-floating/janela-10-correr.webp", alt: "Janela dupla de correr", shape: "wide" },
-  { src: "Images/hero-floating/porta-36-bigbrother.webp", alt: "Porta BigBrother espacada", shape: "door" },
-  { src: "Images/hero-floating/bascula-15-panoramica.webp", alt: "Bascula panoramica", shape: "square" },
-  { src: "Images/hero-floating/janela-32-napoleao.webp", alt: "Janela napoleao de vidro", shape: "wide" },
+  { src: "Images/hero-floating/porta-36-bigbrother.webp", alt: "Porta BigBrother espaçada", shape: "door" },
+  { src: "Images/hero-floating/bascula-15-panoramica.webp", alt: "Báscula panorâmica", shape: "square" },
+  { src: "Images/hero-floating/janela-32-napoleao.webp", alt: "Janela napoleão de vidro", shape: "wide" },
   { src: "Images/hero-floating/porta-17-almofadas.webp", alt: "Porta dez almofadas", shape: "door" },
-  { src: "Images/hero-floating/seteira-17-panoramica.webp", alt: "Seteira panoramica", shape: "door" },
+  { src: "Images/hero-floating/seteira-17-panoramica.webp", alt: "Seteira panorâmica", shape: "door" },
   { src: "Images/hero-floating/janela-05-vidro-almofada.webp", alt: "Janela vidro e almofada", shape: "wide" },
   { src: "Images/hero-floating/marco-10-vidro-diagonal.webp", alt: "Marco vidro diagonal", shape: "door" }
 ];
@@ -142,6 +143,7 @@ function handleRoute() {
     id = idParams.get("id");
   }
 
+  syncRouteSeo(route, id, search);
   stopHeroFloatMotion();
 
   const app = document.getElementById("app");
@@ -168,6 +170,58 @@ function updateActiveNav(route) {
   const selector = route === "home" ? 'a[href="index.html"]' : 'a[href="produtos.html"]';
   const active = document.querySelector(`.nav-links ${selector}`);
   if (active) active.classList.add("active");
+}
+
+function setMetaContent(selector, content) {
+  const tag = document.querySelector(selector);
+  if (tag) tag.setAttribute("content", content);
+}
+
+function setCanonical(url) {
+  let canonical = document.querySelector('link[rel="canonical"]');
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.rel = "canonical";
+    document.head.appendChild(canonical);
+  }
+  canonical.href = url;
+}
+
+function syncRouteSeo(route, categoryId, searchQuery) {
+  let title = "Gusmão Madeiras - Portfólio de Produtos";
+  let description = "Gusmão Madeiras em Contagem: portas, janelas, marcos, seteiras e peças em Angelim para obras, reformas e projetos sob medida.";
+  let canonical = `${siteOrigin}/`;
+  let robots = "index, follow, max-image-preview:large";
+
+  if (route === "products") {
+    title = "Produtos - Gusmão Madeiras";
+    description = "Conheça o catálogo da Gusmão Madeiras com portas, janelas, básculas, marcos, seteiras e portas de correr em Angelim.";
+    canonical = `${siteOrigin}/produtos.html`;
+
+    if (categoryId) {
+      const category = categoriesData.find((c) => c.id === categoryId);
+      if (category) {
+        title = `${category.pluralName} - Gusmão Madeiras`;
+        description = `Conheça ${category.pluralName.toLowerCase()} em Angelim da Gusmão Madeiras para obras, reformas e projetos sob medida.`;
+        canonical = `${siteOrigin}/produtos.html?categoryId=${category.id}`;
+      }
+    } else if (searchQuery) {
+      title = `Busca por ${searchQuery} - Gusmão Madeiras`;
+      robots = "noindex, follow, max-image-preview:large";
+    }
+  } else if (route === "product") {
+    title = "Produto - Gusmão Madeiras";
+    description = "Veja detalhes do produto e solicite orçamento com a Gusmão Madeiras.";
+    canonical = `${siteOrigin}/produtos.html`;
+  }
+
+  document.title = title;
+  setMetaContent('meta[name="description"]', description);
+  setMetaContent('meta[name="robots"]', robots);
+  setMetaContent('meta[property="og:title"]', title);
+  setMetaContent('meta[property="og:description"]', description);
+  setMetaContent('meta[property="og:url"]', canonical);
+  setCanonical(canonical);
 }
 
 function getHighlights() {
@@ -342,7 +396,7 @@ function renderHome(container) {
         </div>
         <div class="categories-grid">
           ${categoriesData.map((c) => `
-            <a href="#" class="category-card" onclick="event.preventDefault(); navigate('products', '${c.id}')">
+            <a href="produtos.html?categoryId=${c.id}" class="category-card" onclick="event.preventDefault(); navigate('products', '${c.id}')">
               <span class="category-icon" aria-hidden="true">${c.icon}</span>
               <h3>${c.name}</h3>
             </a>
@@ -456,9 +510,9 @@ function renderProducts(container, categoryId, searchQuery) {
             <i class="fas fa-chevron-down mobile-only-icon" id="filter-chevron"></i>
           </div>
           <ul class="filter-list collapsed-mobile" id="filter-list">
-            <li><a href="#" class="${!categoryId && !searchQuery ? "active" : ""}" onclick="event.preventDefault(); navigate('products', null, null); closeMobileFilter();">Todos os Produtos</a></li>
+            <li><a href="produtos.html" class="${!categoryId && !searchQuery ? "active" : ""}" onclick="event.preventDefault(); navigate('products', null, null); closeMobileFilter();">Todos os Produtos</a></li>
             ${categoriesData.map((c) => `
-              <li><a href="#" class="${categoryId === c.id ? "active" : ""}" onclick="event.preventDefault(); navigate('products', '${c.id}', null); closeMobileFilter();">${c.name}</a></li>
+              <li><a href="produtos.html?categoryId=${c.id}" class="${categoryId === c.id ? "active" : ""}" onclick="event.preventDefault(); navigate('products', '${c.id}', null); closeMobileFilter();">${c.name}</a></li>
             `).join("")}
           </ul>
         </aside>
