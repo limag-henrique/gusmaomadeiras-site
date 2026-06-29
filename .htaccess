@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# Old indexed URLs from Google -> current static pages.
+RewriteRule ^produtos/?$ /produtos.html [R=301,L,QSD]
+RewriteRule ^contato/?$ /contato.html [R=301,L,QSD]
+RewriteRule ^outlet/?$ /produtos.html?categoryId=porta [R=301,L]
+RewriteRule ^linha-diagonal/?$ /produtos.html?categoryId=janela [R=301,L]
+RewriteRule ^linha-moderna/?$ /produtos.html [R=301,L,QSD]
+
+# Nonexistent page requests go back to the homepage.
+# Keep missing files with extensions as 404s so broken assets remain visible.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !\.[A-Za-z0-9]{1,8}$
+RewriteRule ^ /index.html [R=302,L,QSD]

@@ -1,21 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.gusmaomadeiras.com.br/</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.gusmaomadeiras.com.br/logo.png</image:loc>
+      <image:title>Gusmao Madeiras</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.gusmaomadeiras.com.br/Images/catalogo-casa-madeira-interativa.webp</image:loc>
+      <image:title>Catalogo de portas, janelas e madeiras</image:title>
+    </image:image>
   </url>
+
   <url>
     <loc>https://www.gusmaomadeiras.com.br/produtos.html</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.gusmaomadeiras.com.br/Images/catalogo-casa-madeira-interativa.webp</image:loc>
+      <image:title>Catalogo de produtos Gusmao Madeiras</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.gusmaomadeiras.com.br/Images/hero-floating/porta-101-estruturada.webp</image:loc>
+      <image:title>Porta de angelim estruturada</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.gusmaomadeiras.com.br/Images/hero-floating/janela-41-panoramica.webp</image:loc>
+      <image:title>Janela panoramica de correr</image:title>
+    </image:image>
   </url>
+
+  <url>
+    <loc>https://www.gusmaomadeiras.com.br/produtos.html?categoryId=porta</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.gusmaomadeiras.com.br/Images/101-21-4e02d86a3e24d1253616596333584044-640-0.webp</image:loc>
+      <image:title>Porta de angelim 101 estruturada</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.gusmaomadeiras.com.br/Images/porta-361-b3f8d2c5a71a9d0ad516182504462479-640-0.webp</image:loc>
+      <image:title>Porta de angelim 36 BigBrother espacada</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.gusmaomadeiras.com.br/Images/porta-261-aaada511e2edef503916182500450073-640-0.webp</image:loc>
+      <image:title>Porta de angelim 26 BigBrother</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.gusmaomadeiras.com.br/produtos.html?categoryId=janela</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.gusmaomadeiras.com.br/Images/janela-41x1-3c34f2f835b922a67816182507624079-640-0.webp</image:loc>
+      <image:title>Janela de angelim 41 panoramica de correr</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.gusmaomadeiras.com.br/Images/janela-44-3d8d0ea2d5bf73e24217738347726354-640-0.webp</image:loc>
+      <image:title>Janela de angelim 44 panoramica de correr</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.gusmaomadeiras.com.br/Images/janela-01-21-0ddef8948777e0b42016179983069160-640-0.webp</image:loc>
+      <image:title>Janela de angelim 01 imperial dupla</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.gusmaomadeiras.com.br/produtos.html?categoryId=bascula</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.gusmaomadeiras.com.br/Images/bascula-031-aaad479954d4b37b0116182639185654-640-0.webp</image:loc>
+      <image:title>Bascula de angelim 03a vidro quadriculado com arco colonial</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.gusmaomadeiras.com.br/Images/bascula-02a1-ad5f945d2954df9d0f16183342959553-640-0.webp</image:loc>
+      <image:title>Bascula de angelim 02a vidro quadriculado com arco colonial</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.gusmaomadeiras.com.br/Images/bascula-151-3208b6d89980837b5916183201607725-640-0.webp</image:loc>
+      <image:title>Bascula de angelim 15 panoramica</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.gusmaomadeiras.com.br/produtos.html?categoryId=seteira</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.gusmaomadeiras.com.br/Images/seteira-t2011-734487a24355d01e8e16194406211058-640-0.webp</image:loc>
+      <image:title>Seteira de angelim t201 com vidro temperado</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.gusmaomadeiras.com.br/Images/seteira-171-55b175ade342f6960316183301379421-640-0.webp</image:loc>
+      <image:title>Seteira de angelim 17 panoramica</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.gusmaomadeiras.com.br/Images/seteira-121-43f90eb69cbc60942016183300732723-640-0.webp</image:loc>
+      <image:title>Seteira de angelim 12 tucano</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.gusmaomadeiras.com.br/produtos.html?categoryId=marcos</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.gusmaomadeiras.com.br/Images/marco-081-11c0836d084dff4cca16197138163725-640-0.webp</image:loc>
+      <image:title>Marco de angelim 08 panoramica</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.gusmaomadeiras.com.br/Images/marco-091-62b8954a6f80d9078d16197138588609-640-0.webp</image:loc>
+      <image:title>Marco de angelim 09 tucano</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.gusmaomadeiras.com.br/Images/marco-101-67b656cbd49eb34f9d16197139164825-640-0.webp</image:loc>
+      <image:title>Marco de angelim 10 vidro diagonal</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.gusmaomadeiras.com.br/produtos.html?categoryId=correr</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.gusmaomadeiras.com.br/Images/porta-correr-t301-3060fe76bd66b0fd0417363667748147-640-0.webp</image:loc>
+      <image:title>Porta de correr de vidro temperado t301</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.gusmaomadeiras.com.br/Images/porta-de-correr-071-f124f5c1a76a636a7416197156755050-640-0.webp</image:loc>
+      <image:title>Porta de correr de angelim 07 panoramica</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.gusmaomadeiras.com.br/Images/porta-de-correr-041-b0c2b62e7c0f57406516197156488419-640-0.webp</image:loc>
+      <image:title>Porta de correr de angelim 04 tucano</image:title>
+    </image:image>
+  </url>
+
   <url>
     <loc>https://www.gusmaomadeiras.com.br/contato.html</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://www.gusmaomadeiras.com.br/logo.png</image:loc>
+      <image:title>Contato Gusmao Madeiras</image:title>
+    </image:image>
   </url>
 </urlset>
