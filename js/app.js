@@ -245,6 +245,7 @@ function getHighlights() {
   ];
 
   const validProducts = productsData.filter((p) => {
+    if (!isProductAvailable(p)) return false;
     const t = p.title.toLowerCase().trim();
     if (excludedKeywords.some((ex) => t === ex)) return false;
     const cat = classifyCategory(p.title);
@@ -252,6 +253,10 @@ function getHighlights() {
   });
 
   return validProducts.sort(() => 0.5 - Math.random()).slice(0, 12);
+}
+
+function isProductAvailable(product) {
+  return Boolean(product) && product.removed !== true;
 }
 
 function classifyCategory(productTitle) {
@@ -290,8 +295,9 @@ function getProductLine(title) {
 }
 
 function getCatalogCount(categoryId = null) {
-  if (!categoryId) return productsData.length;
-  return productsData.filter((p) => classifyCategory(p.title) === categoryId).length;
+  const availableProducts = productsData.filter(isProductAvailable);
+  if (!categoryId) return availableProducts.length;
+  return availableProducts.filter((p) => classifyCategory(p.title) === categoryId).length;
 }
 
 function WppLink(productName) {
@@ -523,17 +529,19 @@ function renderProducts(container, categoryId, searchQuery) {
 
   container.innerHTML = bannerHtml + layoutHtml;
 
-  let filtered = productsData;
+  let filtered = productsData.filter(isProductAvailable);
   if (categoryId) {
-    filtered = productsData.filter((p) => classifyCategory(p.title) === categoryId);
+    filtered = productsData.filter((p) => isProductAvailable(p) && classifyCategory(p.title) === categoryId);
   } else if (searchQuery) {
     const q = searchQuery.toLowerCase();
     filtered = productsData.filter((p) =>
-      p.title.toLowerCase().includes(q) ||
-      (p.description && p.description.toLowerCase().includes(q)) ||
-      classifyCategory(p.title).toLowerCase().includes(q) ||
-      getCategoryName(classifyCategory(p.title)).toLowerCase().includes(q) ||
-      getProductLine(p.title).toLowerCase().includes(q)
+      isProductAvailable(p) && (
+        p.title.toLowerCase().includes(q) ||
+        (p.description && p.description.toLowerCase().includes(q)) ||
+        classifyCategory(p.title).toLowerCase().includes(q) ||
+        getCategoryName(classifyCategory(p.title)).toLowerCase().includes(q) ||
+        getProductLine(p.title).toLowerCase().includes(q)
+      )
     );
   }
 
@@ -563,7 +571,7 @@ function renderProducts(container, categoryId, searchQuery) {
 
 function renderProductDetail(container, productId) {
   const p = productsData[productId];
-  if (!p) {
+  if (!isProductAvailable(p)) {
     container.innerHTML = `
       <section class="section-white">
         <div class="container">
