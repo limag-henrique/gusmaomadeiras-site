@@ -1,0 +1,1672 @@
+{
+  "data.json": {
+    "mtime": 1785447637.831948,
+    "ast_hash": "9d4bd93fdbc7534fde02a87a83b35ac3",
+    "semantic_hash": ""
+  },
+  "js/app.js": {
+    "mtime": 1785447623.6427,
+    "ast_hash": "b3a409d496b61d1c9618effacc7d5035",
+    "semantic_hash": ""
+  },
+  "js/components.js": {
+    "mtime": 1773949715.5338633,
+    "ast_hash": "14e37b7836866b1fdd250af8d9edc607",
+    "semantic_hash": ""
+  },
+  "scraped_data.json": {
+    "mtime": 1773949665.3431087,
+    "ast_hash": "7d2df4914fb8ddd4a5e56f52ad049d81",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/manifest.json": {
+    "mtime": 1786992401.688768,
+    "ast_hash": "f35e48d2cfa0ad7cbb866dab365849a7",
+    "semantic_hash": ""
+  },
+  "tmp/review_images.py": {
+    "mtime": 1786992728.6432407,
+    "ast_hash": "9f3cfb290353dfdbbf511d3f7c8aedc6",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1785448372.0905623,
+    "ast_hash": "7b22b618172a46521597b67e72208f42",
+    "semantic_hash": ""
+  },
+  "contato.html": {
+    "mtime": 1782696483.4437153,
+    "ast_hash": "431b9a0499930591d366cecceea9a92f",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-08-05-window-image-reconstruction.md": {
+    "mtime": 1785952350.8813546,
+    "ast_hash": "558d18da1aad734f53a8b608cd654d79",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-08-17-external-product-image-corrections.md": {
+    "mtime": 1786992332.3815222,
+    "ast_hash": "64b4e37e9481dc34130fb538b5ca2e6c",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-08-05-window-image-reconstruction-design.md": {
+    "mtime": 1785951912.061227,
+    "ast_hash": "8717dbf3c4c0a97ca62adb537d82706f",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-08-17-external-product-image-corrections-design.md": {
+    "mtime": 1786992103.4806566,
+    "ast_hash": "df951820215376b996400cda5bd7f61d",
+    "semantic_hash": ""
+  },
+  "index.html": {
+    "mtime": 1782696733.149752,
+    "ast_hash": "bc827158c3bfbbd8f96972825eecf9e9",
+    "semantic_hash": ""
+  },
+  "produtos.html": {
+    "mtime": 1782696949.1341352,
+    "ast_hash": "e70333549e6b250290d1feb03999c320",
+    "semantic_hash": ""
+  },
+  "robots.txt": {
+    "mtime": 1782494546.0407467,
+    "ast_hash": "b8ee9bb5882bad0edfc1b39a5ef1097c",
+    "semantic_hash": ""
+  },
+  "Images/101-21-4e02d86a3e24d1253616596333584044-640-0.webp": {
+    "mtime": 1774027338.6683218,
+    "ast_hash": "50ef410f05b6ac8c79710ee9ea7662a4",
+    "semantic_hash": ""
+  },
+  "Images/26-21-ce4a37777456f18f2d16511717734076-640-0.webp": {
+    "mtime": 1782518168.9861948,
+    "ast_hash": "a63d7981eb687cbf423602d1e9d9fa80",
+    "semantic_hash": ""
+  },
+  "Images/26a-21-78c4238b7ab6719ca616600575487148-640-0.webp": {
+    "mtime": 1782518187.160477,
+    "ast_hash": "56a0e955edc0b6fca69d0da1ec94fae9",
+    "semantic_hash": ""
+  },
+  "Images/42-1-1a1b174320dbbf7d6816503881997722-640-0.webp": {
+    "mtime": 1782518186.4804978,
+    "ast_hash": "e2dd28f3e6d0ec06926eec6e94236bb7",
+    "semantic_hash": ""
+  },
+  "Images/42-2-a7e8e8b14809e48c1216503881999732-640-0.webp": {
+    "mtime": 1782518186.8063948,
+    "ast_hash": "cd14926dbeeaf46dff76774065048b56",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/bascula-de-angelim-02-vidro-quadriculado-ia.webp": {
+    "mtime": 1782506339.4752052,
+    "ast_hash": "a68ff1bcafbab4deab5a81a2c26bd74d",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/bascula-de-angelim-02a-vidro-quadriculado-com-arco-colonial-ia.webp": {
+    "mtime": 1782506339.640153,
+    "ast_hash": "f9f58afd549ab46f32d6b2a28aeb9cf9",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/bascula-de-angelim-03a-vidro-quadriculado-com-arco-colonial-ia.webp": {
+    "mtime": 1786994383.3226674,
+    "ast_hash": "e9841dd6d3a31050d492a487fe90545c",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/bascula-de-angelim-11-tucano-ia.webp": {
+    "mtime": 1786994755.9459941,
+    "ast_hash": "61fd70481b579f93368fe0c6f8aba454",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/bascula-de-angelim-13-diagonal-ia.webp": {
+    "mtime": 1782506341.7559924,
+    "ast_hash": "7e1a8fd4848ba5b7118424e545f6177b",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/bascula-de-angelim-15-panoramica-ia.webp": {
+    "mtime": 1786994755.2081523,
+    "ast_hash": "3166dac8566dd90a3add3595431d9586",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/bascula-de-angelim-t202-com-vidro-temperado-ia.webp": {
+    "mtime": 1786994756.631094,
+    "ast_hash": "e96814cf5dfc6908d196651390857261",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-01-imperial-dupla-ia.webp": {
+    "mtime": 1786994020.9190872,
+    "ast_hash": "046f687c67a66cbf186a1c1b9346eb03",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-02-dupla-vidro-e-veneziana-ia.webp": {
+    "mtime": 1786994021.4761236,
+    "ast_hash": "1930727d9b95cd8faaebd444b03650b2",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-02a-dupla-vidro-e-veneziana-com-arco-colonial-ia.webp": {
+    "mtime": 1786994386.128049,
+    "ast_hash": "92fb33d8397fe647a7153bdafeec9017",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-04-napoleao-dupla-ia.webp": {
+    "mtime": 1786994022.20041,
+    "ast_hash": "8a265ff7ae96c58c2c8e9a023ff9fbed",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-05-vidro-e-almofada-ia.webp": {
+    "mtime": 1785954701.3466315,
+    "ast_hash": "ad877a3fcafc02c9b4e6a00ab2bea7e3",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-05a-vidro-e-almofada-com-arco-colonial-ia.webp": {
+    "mtime": 1786994388.7131338,
+    "ast_hash": "8ab6e5409aec2b4aace6d55157db06fb",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-06-vidro-quadriculado-de-correr-ia.webp": {
+    "mtime": 1786993173.2207913,
+    "ast_hash": "51d3948aff436532d48c09794d1bdba2",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-09-imperial-de-abrir-por-fora-e-correr-interno-ia.webp": {
+    "mtime": 1786994024.0436409,
+    "ast_hash": "0e698541bec94df9bff245693335be5f",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-10-dupla-de-correr-ia.webp": {
+    "mtime": 1786993172.5567362,
+    "ast_hash": "c461295dee29af957cb4eb19f7337c90",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-17-vidro-quadriculado-de-correr-ia.webp": {
+    "mtime": 1786993174.2723148,
+    "ast_hash": "b0a2ed6e19488a8af6695ee316993bad",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-18-vidro-quadriculado-ia.webp": {
+    "mtime": 1786993176.2252147,
+    "ast_hash": "ec7468d15c30035d5a7f0456e24aa848",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-18a-vidro-quadriculado-com-arco-colonial-ia.webp": {
+    "mtime": 1786994383.9623013,
+    "ast_hash": "0bf7eb2309ec67c9672619bb1e959604",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-21-vidro-e-veneziana-ia.webp": {
+    "mtime": 1785954703.3505075,
+    "ast_hash": "6800c2500f05bc8771db210728e59272",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-26-almofada-ia.webp": {
+    "mtime": 1786994034.4281242,
+    "ast_hash": "e5497fff35aa988430188792a45af361",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-26a-almofada-com-arco-colonial-ia.webp": {
+    "mtime": 1786994384.617215,
+    "ast_hash": "d1449e30c865f721bc33128458f591ad",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-29-abrir-por-fora-e-correr-interno-ia.webp": {
+    "mtime": 1786994025.4982402,
+    "ast_hash": "18dd3dc285033560318dded39e3c9e9f",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-31-tucano-de-correr-ia.webp": {
+    "mtime": 1786994027.1130347,
+    "ast_hash": "0000d85b1787be822716211e5577ea19",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-32-napoleao-de-vidro-ia.webp": {
+    "mtime": 1786994028.3103745,
+    "ast_hash": "386eee14d4028a17c2f3765f1f3ac372",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-33-imperial-de-vidro-ia.webp": {
+    "mtime": 1786994029.5754583,
+    "ast_hash": "bb21d6243bfa14827c7288a36130335d",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-34-mexicana-ia.webp": {
+    "mtime": 1786994035.8855176,
+    "ast_hash": "111324f520d76fd0cb16058244d65f8c",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-35-imperial-mexicana-ia.webp": {
+    "mtime": 1786994038.581972,
+    "ast_hash": "a0b9b26c39c221904ba2c9a2c71fbe2e",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-37-dupla-vidro-e-almofada-diagonal-ia.webp": {
+    "mtime": 1786994022.907279,
+    "ast_hash": "1b8e1cfb915f07c66f832dba2da39522",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-38-almofada-diagonal-ia.webp": {
+    "mtime": 1785954692.4949493,
+    "ast_hash": "76adb67064eb103b4bc220b24c487627",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-39-vidro-diagonal-ia.webp": {
+    "mtime": 1786994030.5411067,
+    "ast_hash": "9b0bcf5f0569f047fe5fc373cfaf64cf",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-40-bigbrother-ia.webp": {
+    "mtime": 1786994040.3229206,
+    "ast_hash": "22e290a67ea8da8c87d86fdd3c02ffd6",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-41-panoramica-de-correr-ia.webp": {
+    "mtime": 1786993171.3886995,
+    "ast_hash": "f24a698b5a3bc84eb5ce6b6e82cede80",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-42-bigbrother-de-correr-ia.webp": {
+    "mtime": 1786994032.9508798,
+    "ast_hash": "6b49396b2c2b1c262f6a9e6c1ab70395",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-44-panoramica-de-correr-ia.webp": {
+    "mtime": 1786993171.9932752,
+    "ast_hash": "6dfa2a4e2c5072e6081a57f3cb56fdcd",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-t101-com-vidro-temperado-ia.webp": {
+    "mtime": 1786993179.158557,
+    "ast_hash": "5d256808b4bfac0a0432df6502d8452d",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/janela-de-angelim-t102-com-vidro-temperado-ia.webp": {
+    "mtime": 1786993177.519713,
+    "ast_hash": "5305b9baaefdb1c7d6af665de7b1e7cf",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/marco-de-angelim-01-vidro-quadriculado-ia.webp": {
+    "mtime": 1782506360.6998532,
+    "ast_hash": "7cd69de976a339556e26f41b2414c0bc",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/marco-de-angelim-01a-vidro-quadriculado-com-arco-colonial-ia.webp": {
+    "mtime": 1782506361.2974348,
+    "ast_hash": "7c89157c6bf7ad4f03f2dd52a3e103ca",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/marco-de-angelim-02a-simples-com-arco-colonial-ia.webp": {
+    "mtime": 1782506361.7490118,
+    "ast_hash": "780d6e322cae15262b0a974a1f83df8a",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/marco-de-angelim-05-vidro-quadriculado-ia.webp": {
+    "mtime": 1782506362.348974,
+    "ast_hash": "589a4229ad8180975618b46af64873f2",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/marco-de-angelim-05a-vidro-quadriculado-com-arco-colonial-ia.webp": {
+    "mtime": 1782506363.3135824,
+    "ast_hash": "e2141a41380de8ff7e7412c39fb211f4",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/marco-de-angelim-08-panoramica-ia.webp": {
+    "mtime": 1782506364.3016303,
+    "ast_hash": "5ad778ac788eef9662489500c58c3ae2",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/marco-de-angelim-09-tucano-ia.webp": {
+    "mtime": 1782506364.512895,
+    "ast_hash": "cfa0d147989231820d18647ba8d8cd70",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/marco-de-angelim-09a-tucano-com-arco-colonial-ia.webp": {
+    "mtime": 1782506364.664352,
+    "ast_hash": "461f01ae020e7834a3712a95062dd8a0",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/marco-de-angelim-10-vidro-diagonal-ia.webp": {
+    "mtime": 1782506364.8072636,
+    "ast_hash": "6c9ac4f2056dd435fe13102da2b2429f",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-01-diagonal-ia.webp": {
+    "mtime": 1782506365.4760828,
+    "ast_hash": "569b9cee78cb1e7fd70a5aed56439968",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-02-napoleao-ia.webp": {
+    "mtime": 1782506366.4978125,
+    "ast_hash": "760fa0f381ebd53cf4388dcf4f5c84c5",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-03-10-almofadas-colonial-ia.webp": {
+    "mtime": 1782506367.380551,
+    "ast_hash": "dcf830697cd9afb4d37945fa148b4bc8",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-05-vidro-colonial-ia.webp": {
+    "mtime": 1782506368.1252725,
+    "ast_hash": "b3d489d3b4bf79c16ce6e4c8b2ac3926",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-06-milao-ia.webp": {
+    "mtime": 1782506369.146534,
+    "ast_hash": "f8b3e9630e7933316f847a6d0d44bc5d",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-07-escama-de-peixe-ia.webp": {
+    "mtime": 1782506370.709201,
+    "ast_hash": "81c04632699f70a2b67d7e77c1c3d7dc",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-08-almofadada-horizontal-ia.webp": {
+    "mtime": 1782506373.3637438,
+    "ast_hash": "072def7ae9537bdb495105719b334c46",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-09-tucano-ia.webp": {
+    "mtime": 1782506373.5316813,
+    "ast_hash": "f90bd522153565d7d945c95664e46610",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-101-estruturada-ia.webp": {
+    "mtime": 1782506374.358016,
+    "ast_hash": "798ea3dbbf120b8359c69f13816898a4",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-102-estruturada-com-visor-ia.webp": {
+    "mtime": 1782506375.3249946,
+    "ast_hash": "eb991040669366a422278be88a38472a",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-104-estruturada-ia.webp": {
+    "mtime": 1786992758.7928095,
+    "ast_hash": "2d71f4d740bf360707617484b574a41d",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-11-napoli-ia.webp": {
+    "mtime": 1782506376.8674333,
+    "ast_hash": "28ef9de2e77696fe5e34922a27cd8bf3",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-15-15-almofadas-ia.webp": {
+    "mtime": 1782506377.531468,
+    "ast_hash": "489cc6deade83648bb1b8acbb4504242",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-17-10-almofadas-ia.webp": {
+    "mtime": 1785447707.3994875,
+    "ast_hash": "493175e729ceaf6d1c926a938e2a3de8",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-18-8-almofadas-ia.webp": {
+    "mtime": 1782506379.27757,
+    "ast_hash": "2f5628ec3ab042ff5a8b106f047a40f6",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-19-8-almofadas-colonial-ia.webp": {
+    "mtime": 1782506380.3197336,
+    "ast_hash": "acb6381bf513006842d19043d84c0c9c",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-20-vidro-e-almofada-ia.webp": {
+    "mtime": 1782506381.0982518,
+    "ast_hash": "31bdaf87e4c41c3a78fa0ff6b33d6e98",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-23-vidro-ia.webp": {
+    "mtime": 1782506381.6927059,
+    "ast_hash": "6f18514a618550306fb08531efdaf8c2",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-25-mexicana-ia.webp": {
+    "mtime": 1786992757.3320563,
+    "ast_hash": "d07e71d896d22fd93e2ac1fa683adbdb",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-26-bigbrother-ia.webp": {
+    "mtime": 1786992756.6126761,
+    "ast_hash": "8ed7c9e0e5a59f86ceecf6ccc3481220",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-28-tucano-almofadada-ia.webp": {
+    "mtime": 1782506385.0195272,
+    "ast_hash": "0bf62a2dc491764911a89258b534371b",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-29-marchetada-vertical-ia.webp": {
+    "mtime": 1782506385.671896,
+    "ast_hash": "da02f816292295b3c6f15f92016671cd",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-30-genova-ia.webp": {
+    "mtime": 1782506386.5269556,
+    "ast_hash": "b820af2b920759c34bfdd234a0614829",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-31-bigbrother-intercalado-ia.webp": {
+    "mtime": 1782506387.1978545,
+    "ast_hash": "1e0446fe2964f1383bd976006c179da8",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-32-bigbrother-marchetada-210x100-ia.webp": {
+    "mtime": 1782506387.9940145,
+    "ast_hash": "2c1594b96631cda0c3eb55110f4f93a2",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-32-bigbrother-marchetada-ia.webp": {
+    "mtime": 1782506387.9940145,
+    "ast_hash": "2c1594b96631cda0c3eb55110f4f93a2",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-33-bigbrother-visor-reto-ia.webp": {
+    "mtime": 1782506390.179725,
+    "ast_hash": "ae24b48cdd871658c32e06481d9e3757",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-34-bigbrother-visor-lua-ia.webp": {
+    "mtime": 1782506391.5887537,
+    "ast_hash": "86f79bd6d66d8386b5f9855875379dc0",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-35-marchetada-vertical-ia.webp": {
+    "mtime": 1786992761.4579039,
+    "ast_hash": "b1db495eeef0ef258354a1b328bf6e32",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-36-bigbrother-espacada-ia.webp": {
+    "mtime": 1786992755.8811734,
+    "ast_hash": "8b91963e8231a867efacd86a07434c83",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-37-bigbrother-lua-crescente-ia.webp": {
+    "mtime": 1782506394.0008821,
+    "ast_hash": "189d8383904728d46b5e9e0dbc0f419d",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-38-bigbrother-lua-minguante-ia.webp": {
+    "mtime": 1782506394.7598202,
+    "ast_hash": "08a1b2f8914cb8226a426d3dac43ad0e",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-43-almofada-de-bolinha-ia.webp": {
+    "mtime": 1782506395.6005926,
+    "ast_hash": "fb7d60c18cf30705a9a67791765f00e2",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-46-ripada-ia.webp": {
+    "mtime": 1782506384.8234937,
+    "ast_hash": "1dcb734fae4a3b0abff5010dc360ad39",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-46-ripada-linha-leve-ia.webp": {
+    "mtime": 1782506397.5771937,
+    "ast_hash": "4d75ca43317e1bff1cb8e66ef73dfd2e",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-48-2-almofadas-ia.webp": {
+    "mtime": 1782526421.2371974,
+    "ast_hash": "ed732dc714b85d6ecde5caa4c9125ec7",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-53-panoramica-ia.webp": {
+    "mtime": 1782506398.384555,
+    "ast_hash": "01042f0b976845d9c573eeb6811495c9",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-couro-ia.webp": {
+    "mtime": 1782506399.2188346,
+    "ast_hash": "bcf9ed7af487277cc89898c1e473d3f3",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-angelim-de-prancheta-ia.webp": {
+    "mtime": 1782506399.8060317,
+    "ast_hash": "a3f5f552aba90cd68a771e6e65b34ddc",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-correr-de-angelim-01-vidro-quadriculado-ia.webp": {
+    "mtime": 1785447701.0696535,
+    "ast_hash": "ade17f70c57798de55b7d58909365e47",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-correr-de-angelim-04-tucano-ia.webp": {
+    "mtime": 1785447700.392574,
+    "ast_hash": "a99a57612940ef7955ea9394b82df8e7",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-correr-de-angelim-07-panoramica-ia.webp": {
+    "mtime": 1786994757.3674827,
+    "ast_hash": "2c662b1d38f24dcde55a022f7fdad5fa",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-de-correr-de-vidro-temperado-t301-ia.webp": {
+    "mtime": 1782506401.114728,
+    "ast_hash": "b4501ee23b39b0b06b16981161c64ee8",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/porta-egito-linha-leve-ia.webp": {
+    "mtime": 1782506401.7985065,
+    "ast_hash": "19eb22b67dc50f24d53d4a844ceeb2a3",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/seteira-de-angelim-01-vidro-quadriculado-ia.webp": {
+    "mtime": 1785447706.8433394,
+    "ast_hash": "8405293b0525b1e369b78b0ab0b3df8d",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/seteira-de-angelim-01a-vidro-quadriculado-com-arco-colonial-ia.webp": {
+    "mtime": 1786994387.3907301,
+    "ast_hash": "7f683ef19212c19664d4bffa7914a61e",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/seteira-de-angelim-12-tucano-ia.webp": {
+    "mtime": 1785447702.8241084,
+    "ast_hash": "cfc876c841eec83b3d67da986e11a4d7",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/seteira-de-angelim-16-vidro-diagonal-ia.webp": {
+    "mtime": 1782525922.6497798,
+    "ast_hash": "0f298b91a1f90da28957391b82a36b5c",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/seteira-de-angelim-17-panoramica-ia.webp": {
+    "mtime": 1782506406.1694403,
+    "ast_hash": "70418267fbe055bea05cc1a1b104cd30",
+    "semantic_hash": ""
+  },
+  "Images/ai-usage/seteira-de-angelim-t201-com-vidro-temperado-ia.webp": {
+    "mtime": 1782506406.939394,
+    "ast_hash": "9ff3364d798db3c752cfafdc4b986d74",
+    "semantic_hash": ""
+  },
+  "Images/bascula-02-2-895ebf84999ed6e5ae16479841217879-640-0.webp": {
+    "mtime": 1782518178.6906817,
+    "ast_hash": "7c9c30f1942c20feb17e5501ec2ded3e",
+    "semantic_hash": ""
+  },
+  "Images/bascula-021-4fa9d581aaee44622716182574499332-640-0.webp": {
+    "mtime": 1774027343.8715405,
+    "ast_hash": "8505367d933989ae7ff928ee4a5191b1",
+    "semantic_hash": ""
+  },
+  "Images/bascula-02a1-ad5f945d2954df9d0f16183342959553-640-0.webp": {
+    "mtime": 1774027343.7194347,
+    "ast_hash": "4bcb05c6cfbd5f8d50140ecbadb88217",
+    "semantic_hash": ""
+  },
+  "Images/bascula-031-aaad479954d4b37b0116182639185654-640-0.webp": {
+    "mtime": 1774027343.5923252,
+    "ast_hash": "d9992c9fec27c2f499b6f5c57f9fce0c",
+    "semantic_hash": ""
+  },
+  "Images/bascula-11-2-7c0dc5609a0e2742ef16479844483286-640-0.webp": {
+    "mtime": 1782518179.5122771,
+    "ast_hash": "135b3bba009277d00fe9cac58d09e447",
+    "semantic_hash": ""
+  },
+  "Images/bascula-111-21b225ee91a95a888216182571893683-640-0.webp": {
+    "mtime": 1774027344.7849705,
+    "ast_hash": "38fab27f3aeca6fbfce284e6419bc6a4",
+    "semantic_hash": ""
+  },
+  "Images/bascula-131-85bd9955d7a32dcfbc16182572304092-640-0.webp": {
+    "mtime": 1774027344.2140787,
+    "ast_hash": "80ba0e4aa6ece01ec750e8d5aaae744c",
+    "semantic_hash": ""
+  },
+  "Images/bascula-15-panoramica-343b1815401376b31a16480762991608-640-0.webp": {
+    "mtime": 1782518179.139078,
+    "ast_hash": "927db21259173121a72c5bbc9a45e52b",
+    "semantic_hash": ""
+  },
+  "Images/bascula-151-3208b6d89980837b5916183201607725-640-0.webp": {
+    "mtime": 1774027344.5715523,
+    "ast_hash": "8d4411ffbacf1863c14cd0dfb872284e",
+    "semantic_hash": ""
+  },
+  "Images/bascula-t2021-5c9d6d240224206d2a16194405687056-640-0.webp": {
+    "mtime": 1774027344.9947226,
+    "ast_hash": "23c8c8f3beac8a27eb5178fa560e636e",
+    "semantic_hash": ""
+  },
+  "Images/catalogo-casa-madeira-interativa.webp": {
+    "mtime": 1782527287.8565042,
+    "ast_hash": "901e9efe59581678727708b212fe934b",
+    "semantic_hash": ""
+  },
+  "Images/hero-floating/bascula-15-panoramica.webp": {
+    "mtime": 1782506407.4768095,
+    "ast_hash": "33327780ab54c4e03def59061d002e87",
+    "semantic_hash": ""
+  },
+  "Images/hero-floating/janela-05-vidro-almofada.webp": {
+    "mtime": 1782506408.0363183,
+    "ast_hash": "25a8b6d7b4a9349e3a47bdb4e00bb782",
+    "semantic_hash": ""
+  },
+  "Images/hero-floating/janela-10-correr.webp": {
+    "mtime": 1782506408.5589006,
+    "ast_hash": "299f5cf432206565be87837408a3d3f7",
+    "semantic_hash": ""
+  },
+  "Images/hero-floating/janela-32-napoleao.webp": {
+    "mtime": 1782506409.1785953,
+    "ast_hash": "b939e14bde1639933cdaa18c58adaa0d",
+    "semantic_hash": ""
+  },
+  "Images/hero-floating/janela-41-panoramica.webp": {
+    "mtime": 1782506410.035298,
+    "ast_hash": "1efb901338c2a1e37e52df0a8bc09c9e",
+    "semantic_hash": ""
+  },
+  "Images/hero-floating/marco-10-vidro-diagonal.webp": {
+    "mtime": 1782506410.7765112,
+    "ast_hash": "0710c7acb735f66431b012e4a13a8ca9",
+    "semantic_hash": ""
+  },
+  "Images/hero-floating/porta-101-estruturada.webp": {
+    "mtime": 1782506411.9789586,
+    "ast_hash": "1ed5282eafc68a6ba519673479ccf242",
+    "semantic_hash": ""
+  },
+  "Images/hero-floating/porta-17-almofadas.webp": {
+    "mtime": 1782506412.5713198,
+    "ast_hash": "a60908431391d0b083a7a2d7f86ea002",
+    "semantic_hash": ""
+  },
+  "Images/hero-floating/porta-36-bigbrother.webp": {
+    "mtime": 1782506413.2819173,
+    "ast_hash": "3739c5e86625ded20641ef21171d60ba",
+    "semantic_hash": ""
+  },
+  "Images/hero-floating/porta-53-panoramica.webp": {
+    "mtime": 1782506413.8530865,
+    "ast_hash": "d4254c029a4746d9342f1e6e54063bb1",
+    "semantic_hash": ""
+  },
+  "Images/hero-floating/porta-correr-04-tucano.webp": {
+    "mtime": 1782506414.4128778,
+    "ast_hash": "1323a5efbade3aae660e7a5c63c69317",
+    "semantic_hash": ""
+  },
+  "Images/hero-floating/seteira-17-panoramica.webp": {
+    "mtime": 1782506415.0247445,
+    "ast_hash": "ede67693e2d350bee031ff75b87117ec",
+    "semantic_hash": ""
+  },
+  "Images/janela-01-11-b0371419fd8d6725bd16179983078789-640-0.webp": {
+    "mtime": 1782518174.8177166,
+    "ast_hash": "7457a7e8b6156a4421e995a66c100c66",
+    "semantic_hash": ""
+  },
+  "Images/janela-01-111-b0371419fd8d6725bd16182509922746-640-0.webp": {
+    "mtime": 1782518176.34656,
+    "ast_hash": "7457a7e8b6156a4421e995a66c100c66",
+    "semantic_hash": ""
+  },
+  "Images/janela-01-21-0ddef8948777e0b42016179983069160-640-0.webp": {
+    "mtime": 1774027341.565758,
+    "ast_hash": "683504d5efb5547515f0ee76e7d81e94",
+    "semantic_hash": ""
+  },
+  "Images/janela-02a-11-ec41b271c68f8c975216334413253298-640-0.webp": {
+    "mtime": 1782518187.5937066,
+    "ast_hash": "e633c9263ca844b1092b8025ae39a32f",
+    "semantic_hash": ""
+  },
+  "Images/janela-02a1-184ab9769c74f9ed5516334413252159-640-0.webp": {
+    "mtime": 1774027351.3258934,
+    "ast_hash": "27191fbee54cba78873287a58536c95a",
+    "semantic_hash": ""
+  },
+  "Images/janela-02a1-premium-transparent.png": {
+    "mtime": 1782524724.6050599,
+    "ast_hash": "81138f4856e490639db9ca969b09de21",
+    "semantic_hash": ""
+  },
+  "Images/janela-02x-1-9993f61a89796f56bd16182508802297-640-0.webp": {
+    "mtime": 1782518175.151681,
+    "ast_hash": "ce369a33b76953f89c69db9190f0e4a4",
+    "semantic_hash": ""
+  },
+  "Images/janela-02x-111-9993f61a89796f56bd16182510869133-640-0.webp": {
+    "mtime": 1782518176.816904,
+    "ast_hash": "ce369a33b76953f89c69db9190f0e4a4",
+    "semantic_hash": ""
+  },
+  "Images/janela-02x-2-dec20c94e171fc071f16182508800239-640-0.webp": {
+    "mtime": 1774027341.707795,
+    "ast_hash": "56400249b1c5496e0d8dae1b1f227b27",
+    "semantic_hash": ""
+  },
+  "Images/janela-04-11-36c5fcf351dc48ad9d16182508792737-640-0.webp": {
+    "mtime": 1782518175.5584738,
+    "ast_hash": "9a5d09cd23fa3bdcc2677f4e03db0d08",
+    "semantic_hash": ""
+  },
+  "Images/janela-04-21-60fd5e4fbec9571a6216182508791478-640-0.webp": {
+    "mtime": 1774027341.8688233,
+    "ast_hash": "f1474df63a2ad459ec48c0ae4885255c",
+    "semantic_hash": ""
+  },
+  "Images/janela-05a1-67953d435a5149064916334415645934-640-0.webp": {
+    "mtime": 1774027354.859946,
+    "ast_hash": "5a90eb4ffb89dc2add41a7fdaef85725",
+    "semantic_hash": ""
+  },
+  "Images/janela-05x1-fd5cce5269b1d6b35416182508800417-640-0.webp": {
+    "mtime": 1774027354.4215693,
+    "ast_hash": "6045a9de3c00f15799d37b3f66bfe994",
+    "semantic_hash": ""
+  },
+  "Images/janela-06x1-af22e8b2f1847c719716182508802877-640-0.webp": {
+    "mtime": 1774027342.5937572,
+    "ast_hash": "d1470a58302bf95aa9276d4353c3e126",
+    "semantic_hash": ""
+  },
+  "Images/janela-091-697743ee318bc38f0a16182509921549-640-0.webp": {
+    "mtime": 1774027342.1815605,
+    "ast_hash": "29bd2c01fefacf5fa66235bf51f3bf00",
+    "semantic_hash": ""
+  },
+  "Images/janela-10x1-7e222a5ec37454758f16182509940644-640-0.webp": {
+    "mtime": 1774027342.4699576,
+    "ast_hash": "8786f5559e66fa803ba45f80d9f4f5e8",
+    "semantic_hash": ""
+  },
+  "Images/janela-17x1-23358eb4373fdbadae16182509974746-640-0.webp": {
+    "mtime": 1774027342.733241,
+    "ast_hash": "9716d39547d472e61a114a146c916fa5",
+    "semantic_hash": ""
+  },
+  "Images/janela-18-31-bf81e506d8c75885ec16552341990336-640-0.webp": {
+    "mtime": 1774027343.009069,
+    "ast_hash": "d45fd34f7a5899eb215e5f9df5f54db1",
+    "semantic_hash": ""
+  },
+  "Images/janela-181-52d2f6e38b4a6beedd16552341992752-640-0.webp": {
+    "mtime": 1782518177.9998226,
+    "ast_hash": "e49a7c57c29cde08c6dcd2c4a9b57d3b",
+    "semantic_hash": ""
+  },
+  "Images/janela-18a1-6203b25b9de55e59af16334417042019-640-0.webp": {
+    "mtime": 1774027349.330018,
+    "ast_hash": "946ec05c0e88ca69aadd6259996f97a0",
+    "semantic_hash": ""
+  },
+  "Images/janela-21x1-dd3be293397f23364416182510012284-640-0.webp": {
+    "mtime": 1774027354.5791988,
+    "ast_hash": "166db85c35a9d5906f1c0371e702ba89",
+    "semantic_hash": ""
+  },
+  "Images/janela-26a1-d1b5af522bd883c75c16334418455214-640-0.webp": {
+    "mtime": 1774027349.4778147,
+    "ast_hash": "7e007eea707c4fa6b8d57c479f6af34c",
+    "semantic_hash": ""
+  },
+  "Images/janela-26x-21-cd2bf26075c810b0bd16479848843920-640-0.webp": {
+    "mtime": 1782518190.1853623,
+    "ast_hash": "bfe99fb7a100b9c6b513d9d55055e735",
+    "semantic_hash": ""
+  },
+  "Images/janela-26x1-f2cfac34325e6c0a1016182510034245-640-0.webp": {
+    "mtime": 1774027354.7048583,
+    "ast_hash": "05d9365b2ceebfdd89d1c0d489fd8261",
+    "semantic_hash": ""
+  },
+  "Images/janela-29x1-4068e9ecae020ec7a816182510866459-640-0.webp": {
+    "mtime": 1774027342.3104622,
+    "ast_hash": "239e959152c78c7cd00a71104cd868fb",
+    "semantic_hash": ""
+  },
+  "Images/janela-31x-2-300187d101379e945816479854080981-640-0.webp": {
+    "mtime": 1782518177.7174895,
+    "ast_hash": "8cefbfa0eb10a01e324d1dec72bb4ea5",
+    "semantic_hash": ""
+  },
+  "Images/janela-31x1-5be6f08c1dc021ae7e16182512336652-640-0.webp": {
+    "mtime": 1774027342.8834732,
+    "ast_hash": "41829c3af161925a6e1eb333d0373239",
+    "semantic_hash": ""
+  },
+  "Images/janela-321-adccb42a39bbcab57b16182512295840-640-0.webp": {
+    "mtime": 1774027343.1513088,
+    "ast_hash": "7947498ec1694e6283614eb073a86426",
+    "semantic_hash": ""
+  },
+  "Images/janela-331-923a623a22f160110916182512285622-640-0.webp": {
+    "mtime": 1774027343.2986867,
+    "ast_hash": "c6d606cdb68f38cfcd8229105c71661c",
+    "semantic_hash": ""
+  },
+  "Images/janela-34-21-92e53c5dc1120be8fe16596343832377-640-0.webp": {
+    "mtime": 1782518190.61064,
+    "ast_hash": "f4a5c0a055c7def34536d5aee882e419",
+    "semantic_hash": ""
+  },
+  "Images/janela-34x1-a300379a4b3669238216182512256369-640-0.webp": {
+    "mtime": 1774027355.0250602,
+    "ast_hash": "47767860fcc81041c0ffe4cda47e2fd4",
+    "semantic_hash": ""
+  },
+  "Images/janela-351-8dc230c529e089a34216182512235762-640-0.webp": {
+    "mtime": 1774027355.158512,
+    "ast_hash": "75d90e1d5e2f40c695495cee9316cd78",
+    "semantic_hash": ""
+  },
+  "Images/janela-37x1-b562fbd92a884e9a1616182512228949-640-0.webp": {
+    "mtime": 1774027342.0062125,
+    "ast_hash": "0290d073ed9bdbf7a69073155999833f",
+    "semantic_hash": ""
+  },
+  "Images/janela-381-faacde0f38af02bc8716184173517130-640-0.webp": {
+    "mtime": 1774027347.424006,
+    "ast_hash": "1d1deeae21d81a14873c40c1246dda44",
+    "semantic_hash": ""
+  },
+  "Images/janela-3811-faacde0f38af02bc8716184185168215-640-0.webp": {
+    "mtime": 1782518176.0097563,
+    "ast_hash": "1d1deeae21d81a14873c40c1246dda44",
+    "semantic_hash": ""
+  },
+  "Images/janela-39x1-daa9cfb03e2f10412816182512212643-640-0.webp": {
+    "mtime": 1774027343.4645584,
+    "ast_hash": "b6ddcf0f6100e07f1ee21620480ceace",
+    "semantic_hash": ""
+  },
+  "Images/janela-40x11-5603bf26fd0a45ea6716182513101567-640-0.webp": {
+    "mtime": 1774027355.287105,
+    "ast_hash": "ea481bbcd31c071f68eb7298a883a379",
+    "semantic_hash": ""
+  },
+  "Images/janela-41-21-c0dfca5317376ff14216916869686249-640-0.webp": {
+    "mtime": 1782518168.4859793,
+    "ast_hash": "6329a6ff66fbf3d92436cac2103b571c",
+    "semantic_hash": ""
+  },
+  "Images/janela-41x1-3c34f2f835b922a67816182507624079-640-0.webp": {
+    "mtime": 1774027338.5103495,
+    "ast_hash": "05e1099e228e10ec4b2f94b359b35a4b",
+    "semantic_hash": ""
+  },
+  "Images/janela-42-1-5222ec4b2e688d568516503878884150-640-0.webp": {
+    "mtime": 1774027348.8571157,
+    "ast_hash": "ba0920df50c0cc4598bcbeb9a6832c04",
+    "semantic_hash": ""
+  },
+  "Images/janela-42-2-02ba18ccce9649243816503878883413-640-0.webp": {
+    "mtime": 1782518186.1219575,
+    "ast_hash": "2a8726c44d498266cf1111b2ba688dcb",
+    "semantic_hash": ""
+  },
+  "Images/janela-44-3d8d0ea2d5bf73e24217738347726354-640-0.webp": {
+    "mtime": 1774027341.4198773,
+    "ast_hash": "584f1987a572cd0f669eee1fda66e79f",
+    "semantic_hash": ""
+  },
+  "Images/janela-t1011-a4d5e2091a9412349016788993800654-640-0.webp": {
+    "mtime": 1782518181.054048,
+    "ast_hash": "ba01336ce856bdb6232d40becb592d91",
+    "semantic_hash": ""
+  },
+  "Images/janela-vt111-073287be8f252fabbd16597232190854-640-0.webp": {
+    "mtime": 1774027346.4856026,
+    "ast_hash": "9066818a4ae4c677181e2132ea398070",
+    "semantic_hash": ""
+  },
+  "Images/janela-vt2-copy1-a41cd5d52187f02db516322266151288-640-0.webp": {
+    "mtime": 1774027346.3169491,
+    "ast_hash": "8301abd866bcc78ba00f6b1508054401",
+    "semantic_hash": ""
+  },
+  "Images/janela06-21-b5081d54ca402900eb16539336819563-640-0.webp": {
+    "mtime": 1782518177.1951926,
+    "ast_hash": "e095aa8dcd8bfd118cd4f72025f2a478",
+    "semantic_hash": ""
+  },
+  "Images/logo-1909907439-1611687364-fce698f59000a235a2357c137d1819401611687365.png": {
+    "mtime": 1774027338.3951151,
+    "ast_hash": "fce698f59000a235a2357c137d181940",
+    "semantic_hash": ""
+  },
+  "Images/marco-011-cdaf1161b64980486c16197136907009-640-0.webp": {
+    "mtime": 1774027355.9884746,
+    "ast_hash": "96bf2c5a94a1810f57977cdf518d81d0",
+    "semantic_hash": ""
+  },
+  "Images/marco-01a1-9cccf52ab1c8062ea616197137338296-640-0.webp": {
+    "mtime": 1774027355.8659272,
+    "ast_hash": "f61a0bc41645d895e4743f2fdbb7f9f4",
+    "semantic_hash": ""
+  },
+  "Images/marco-02a1-f2f9d45d0e5025a73516319902524533-640-0.webp": {
+    "mtime": 1774027355.4735608,
+    "ast_hash": "6a6e4ecb7ada8adfdc1b726669440d5c",
+    "semantic_hash": ""
+  },
+  "Images/marco-051-33028c02e1fe89a3e316197137631832-640-0.webp": {
+    "mtime": 1774027355.7377264,
+    "ast_hash": "e988d1d2d65973ed42cd8ec93a187f6f",
+    "semantic_hash": ""
+  },
+  "Images/marco-05a1-21d48a5b33cf17c96216197137838865-640-0.webp": {
+    "mtime": 1774027355.6062007,
+    "ast_hash": "67f3527731f0be1a396e9d3138e0a305",
+    "semantic_hash": ""
+  },
+  "Images/marco-08-2-add7823f524b95623a16480775648599-640-0.webp": {
+    "mtime": 1782518180.5126233,
+    "ast_hash": "0a5afe601168c09fb4f9645a83fb3212",
+    "semantic_hash": ""
+  },
+  "Images/marco-081-11c0836d084dff4cca16197138163725-640-0.webp": {
+    "mtime": 1774027346.1180985,
+    "ast_hash": "db0b0c3a45bf3417fb9b4696c33444c5",
+    "semantic_hash": ""
+  },
+  "Images/marco-091-62b8954a6f80d9078d16197138588609-640-0.webp": {
+    "mtime": 1774027346.970395,
+    "ast_hash": "31bebae0d97ddb18870e798da5843113",
+    "semantic_hash": ""
+  },
+  "Images/marco-09a11-ffd5bfcbb2f070f18516321446911722-640-0.webp": {
+    "mtime": 1774027347.1269205,
+    "ast_hash": "82c660e2c211114133d133e2735174ea",
+    "semantic_hash": ""
+  },
+  "Images/marco-101-67b656cbd49eb34f9d16197139164825-640-0.webp": {
+    "mtime": 1774027347.725744,
+    "ast_hash": "21dbf84edd9626b7ac350e56ede90561",
+    "semantic_hash": ""
+  },
+  "Images/p11-e1f1c826bc84bfb32216318905909985-640-0.webp": {
+    "mtime": 1782518172.1426215,
+    "ast_hash": "642aa8bcef967808b71e03928ae531d3",
+    "semantic_hash": ""
+  },
+  "Images/p21-e3430ed34d62f2ed7816318905910179-640-0.webp": {
+    "mtime": 1782518172.5299852,
+    "ast_hash": "a8d3dd7638a035ba316930101a931d08",
+    "semantic_hash": ""
+  },
+  "Images/p31-219cf8894ddfe8d26d16318905907839-640-0.webp": {
+    "mtime": 1774027340.1924813,
+    "ast_hash": "3a8cc8c2da970d9652ba298dc5b42151",
+    "semantic_hash": ""
+  },
+  "Images/porta-011-6b7d854e75add43c0416182495991148-640-0.webp": {
+    "mtime": 1774027339.632406,
+    "ast_hash": "528111d1c1a5b3ff9a97a9f9489f1aff",
+    "semantic_hash": ""
+  },
+  "Images/porta-021-0718429b1c7e47961216916898135913-640-0.webp": {
+    "mtime": 1774027348.1042387,
+    "ast_hash": "fea25a640b0ae49c3c280e0c78d9620e",
+    "semantic_hash": ""
+  },
+  "Images/porta-031-fd490a32a01656ddcb16916900694345-640-0.webp": {
+    "mtime": 1774027347.985954,
+    "ast_hash": "3aac5639fddeb8e79ba9449500f6512d",
+    "semantic_hash": ""
+  },
+  "Images/porta-051-503a8f36cd6672e34a16182497197338-640-0.webp": {
+    "mtime": 1774027353.3465087,
+    "ast_hash": "e3248cd3dc19c5556fa199999ac2b6b1",
+    "semantic_hash": ""
+  },
+  "Images/porta-06-21-e3da34c3e714ae72f916916903269669-640-0.webp": {
+    "mtime": 1774027341.1825268,
+    "ast_hash": "348971851986823c04872813863371a3",
+    "semantic_hash": ""
+  },
+  "Images/porta-061-12419ad7be0c146c4f16182497182015-640-0.webp": {
+    "mtime": 1782518173.8942733,
+    "ast_hash": "2c43f355a5997212063f77e4f2410c14",
+    "semantic_hash": ""
+  },
+  "Images/porta-071-0135871360e5c2ab3d16182497235378-640-0.webp": {
+    "mtime": 1774027341.3045406,
+    "ast_hash": "38c7aac96171929111731c3e7093c7e9",
+    "semantic_hash": ""
+  },
+  "Images/porta-08-21-8b5d82df674f620e8616916883864837-640-0.webp": {
+    "mtime": 1782518173.1243546,
+    "ast_hash": "d68ab4369fce1ebde98c12c4825174cb",
+    "semantic_hash": ""
+  },
+  "Images/porta-081-dc456781964afa417116182496515960-640-0.webp": {
+    "mtime": 1774027340.774381,
+    "ast_hash": "cd8b64b2f5c2f83c6748ac65510a096c",
+    "semantic_hash": ""
+  },
+  "Images/porta-091-65db060ab4b21f934e16182497910080-640-0.webp": {
+    "mtime": 1774027346.6660678,
+    "ast_hash": "2582027348e60ed5d4d315a26bd2fb5c",
+    "semantic_hash": ""
+  },
+  "Images/porta-101-21-4a74ff866a54a963dd16596333585217-640-0.webp": {
+    "mtime": 1782518168.684415,
+    "ast_hash": "7343c3066e477922aea7ff3c37ebbc63",
+    "semantic_hash": ""
+  },
+  "Images/porta-101-31-7395bdacc4f7be2f2a16596333585137-640-0.webp": {
+    "mtime": 1782518168.7115188,
+    "ast_hash": "78b89b3ea27fec736b22d8b8da57b877",
+    "semantic_hash": ""
+  },
+  "Images/porta-101-6cm1-26b36e16f18064c8d116292494305357-640-0.webp": {
+    "mtime": 1782518189.523856,
+    "ast_hash": "280794c695f183fa420402712680429b",
+    "semantic_hash": ""
+  },
+  "Images/porta-1011-1f3991cc6c63c937e916182505017388-640-0.webp": {
+    "mtime": 1782518168.655314,
+    "ast_hash": "c74a1c34095493030ff1eb8ddb84802c",
+    "semantic_hash": ""
+  },
+  "Images/porta-1021-7cb9c329a8b3ecc00116292494301955-640-0.webp": {
+    "mtime": 1774027354.1491356,
+    "ast_hash": "5d8e41cfb4601442a0668c31fc98db99",
+    "semantic_hash": ""
+  },
+  "Images/porta-1041-635594ae7e5203aabb16789020044303-640-0.webp": {
+    "mtime": 1774027348.7025285,
+    "ast_hash": "15e616dca548cc781c10edd04183ed41",
+    "semantic_hash": ""
+  },
+  "Images/porta-111-e92a448f220400150316535712923998-640-0.webp": {
+    "mtime": 1782518173.4938028,
+    "ast_hash": "16f85d29510f0f2e804815590a6afd11",
+    "semantic_hash": ""
+  },
+  "Images/porta-111-f57c0f44b4e970d89816182498246697-640-0.webp": {
+    "mtime": 1774027340.9002688,
+    "ast_hash": "47d31d55e1d33ae9f84c1c2767c2d1e2",
+    "semantic_hash": ""
+  },
+  "Images/porta-151-86dfbcd5504db6948216182498647925-640-0.webp": {
+    "mtime": 1774027353.9751303,
+    "ast_hash": "2e231eb38bef0556efdca13f4c3ae76c",
+    "semantic_hash": ""
+  },
+  "Images/porta-17-21-d57422f55ea1eacf9d16928169061389-640-0.webp": {
+    "mtime": 1782518188.6095407,
+    "ast_hash": "fb4465e515ae60a3bc4732768787bfaa",
+    "semantic_hash": ""
+  },
+  "Images/porta-17-21-f850ce0f20b5ea3b6916596439515365-640-0.webp": {
+    "mtime": 1774027353.511185,
+    "ast_hash": "99bce4f9b558e570fda1824537780e0e",
+    "semantic_hash": ""
+  },
+  "Images/porta-171-e21a83cbdd19da7f4f16182498977837-640-0.webp": {
+    "mtime": 1782518188.3420198,
+    "ast_hash": "13b0f500fc0d5f8d0d4217aca785f6df",
+    "semantic_hash": ""
+  },
+  "Images/porta-181-2a90135743469d172d16182499495855-640-0.webp": {
+    "mtime": 1774027353.681294,
+    "ast_hash": "0dbd46a6377be9867d2d548bb1fcdcec",
+    "semantic_hash": ""
+  },
+  "Images/porta-19-221-95498dc503b2b924a216184217879648-640-0.webp": {
+    "mtime": 1782518189.3512242,
+    "ast_hash": "070284c1cc44dd786d2b84d5a97761c6",
+    "semantic_hash": ""
+  },
+  "Images/porta-1911-4e67091c4bb3a97edf16184226018134-640-0.webp": {
+    "mtime": 1774027353.8382084,
+    "ast_hash": "6b939197fcf4329dbe0dd678fb5328b4",
+    "semantic_hash": ""
+  },
+  "Images/porta-201-481659e0c78616b3ff16818215394577-640-0.webp": {
+    "mtime": 1774027349.0556924,
+    "ast_hash": "a09a8a4879c05dbb69c68f3c221c2127",
+    "semantic_hash": ""
+  },
+  "Images/porta-231-1718a63d60e4ce091516322270166530-640-0.webp": {
+    "mtime": 1774027354.286506,
+    "ast_hash": "828fb4d08a6d391f155f54c39f137d40",
+    "semantic_hash": ""
+  },
+  "Images/porta-251-17283e26b430a0768316182500220570-640-0.webp": {
+    "mtime": 1774027340.6339808,
+    "ast_hash": "ad07690b454c21386a570e32e904b292",
+    "semantic_hash": ""
+  },
+  "Images/porta-26-2-afca8ec4b7ce5e1f4616480771636331-640-0.webp": {
+    "mtime": 1782518168.940654,
+    "ast_hash": "c4353b5815a38b01f82b739892f69bfc",
+    "semantic_hash": ""
+  },
+  "Images/porta-26-21-be71ba165c2446af1d16535723673234-640-0.webp": {
+    "mtime": 1782518169.0257716,
+    "ast_hash": "6ebaa7b81f74c3ff41cbd93ac8bc3072",
+    "semantic_hash": ""
+  },
+  "Images/porta-261-aaada511e2edef503916182500450073-640-0.webp": {
+    "mtime": 1774027339.228099,
+    "ast_hash": "45816ec89c75309c5485a7cb33a3ccc7",
+    "semantic_hash": ""
+  },
+  "Images/porta-281-2b5a7b9bb9b794e13c16503884705212-640-0.webp": {
+    "mtime": 1774027347.2509775,
+    "ast_hash": "9aecb58e7c48a1c2a7fc03e12c4cd6f8",
+    "semantic_hash": ""
+  },
+  "Images/porta-2911-1133edf39fd2dce14816183364646466-640-0.webp": {
+    "mtime": 1774027352.5182612,
+    "ast_hash": "429ba141d10f44442621ebe6c6e25c1e",
+    "semantic_hash": ""
+  },
+  "Images/porta-301-4502b4b36c60652e8a16182502195031-640-0.webp": {
+    "mtime": 1774027341.029534,
+    "ast_hash": "fc25b73c33d65b94bafcb48c148385f5",
+    "semantic_hash": ""
+  },
+  "Images/porta-311-0ea97217ac53c4bd5e16182502522990-640-0.webp": {
+    "mtime": 1774027339.4962094,
+    "ast_hash": "423e6be673419157093345f7425504dc",
+    "semantic_hash": ""
+  },
+  "Images/porta-32-111-effdf1466c5789029016334521316336-640-0.webp": {
+    "mtime": 1782518169.1436436,
+    "ast_hash": "8de40efae4712b42089f728edd731568",
+    "semantic_hash": ""
+  },
+  "Images/porta-32-21-beb4733bc883b75bb716511718817583-640-0.webp": {
+    "mtime": 1782518171.091311,
+    "ast_hash": "3e35ea2b844c78dea891d37d04376baa",
+    "semantic_hash": ""
+  },
+  "Images/porta-32-211-56838b2a4f302d720016334521314582-640-0.webp": {
+    "mtime": 1782518169.1078992,
+    "ast_hash": "c7ffbd7fed286e514be6d25166bf94dc",
+    "semantic_hash": ""
+  },
+  "Images/porta-32-31-e0e78cce40c0943b6916916859459360-640-0.webp": {
+    "mtime": 1774027339.3595083,
+    "ast_hash": "78e84a769700532593536d785c4ad95a",
+    "semantic_hash": ""
+  },
+  "Images/porta-32-311-e0e78cce40c0943b6916916910306755-640-0.webp": {
+    "mtime": 1774027340.0727813,
+    "ast_hash": "78e84a769700532593536d785c4ad95a",
+    "semantic_hash": ""
+  },
+  "Images/porta-321-fb05a754f63c7a925016182502872370-640-0.webp": {
+    "mtime": 1782518171.138689,
+    "ast_hash": "a8fc5f547965c19d8fe6615a02a891ab",
+    "semantic_hash": ""
+  },
+  "Images/porta-33-2-7c5d57d532499c1f2c16480768640492-640-0.webp": {
+    "mtime": 1782518171.5041835,
+    "ast_hash": "8f0de677d63fb93ac1b5c2842b7b77fa",
+    "semantic_hash": ""
+  },
+  "Images/porta-33-21-757ee5a541c772023616535719840481-640-0.webp": {
+    "mtime": 1782518171.5344796,
+    "ast_hash": "f66f77aee88bdb2ccbadc1f973a436ce",
+    "semantic_hash": ""
+  },
+  "Images/porta-331-8269681c8032dbbe5b16182503540618-640-0.webp": {
+    "mtime": 1774027339.9387777,
+    "ast_hash": "a812c848848d540a0ca9f2fb595c7992",
+    "semantic_hash": ""
+  },
+  "Images/porta-34-31-7a80e74398db8cba5616916886439164-640-0.webp": {
+    "mtime": 1774027339.7866726,
+    "ast_hash": "fdd2207d59bad22421a2642bc4858ee3",
+    "semantic_hash": ""
+  },
+  "Images/porta-341-05102bd37617b2512816182503804613-640-0.webp": {
+    "mtime": 1782518171.37543,
+    "ast_hash": "e9cd0dccd6bd81d796ff4a0185ce6715",
+    "semantic_hash": ""
+  },
+  "Images/porta-351-306434cce22961028916182504138947-640-0.webp": {
+    "mtime": 1774027352.0091364,
+    "ast_hash": "d555118934c57e3b0e341ae72dffcec8",
+    "semantic_hash": ""
+  },
+  "Images/porta-361-b3f8d2c5a71a9d0ad516182504462479-640-0.webp": {
+    "mtime": 1774027339.093935,
+    "ast_hash": "203a866a5b62c84e3fff2be7325041d3",
+    "semantic_hash": ""
+  },
+  "Images/porta-371-0087d6109b464a2c4c16182504685433-640-0.webp": {
+    "mtime": 1774027340.4925702,
+    "ast_hash": "0cf6497b0d591e14846421b56c18b999",
+    "semantic_hash": ""
+  },
+  "Images/porta-381-3402656420734bacf716479835287098-640-0.webp": {
+    "mtime": 1774027349.2011116,
+    "ast_hash": "a43a8b9f1423025d379ff18755d69f70",
+    "semantic_hash": ""
+  },
+  "Images/porta-381-502e8ecdb5c966c6f916184186191573-640-0.webp": {
+    "mtime": 1774027352.8443499,
+    "ast_hash": "f4a4fa7d14c0061155e6f8f63934a80b",
+    "semantic_hash": ""
+  },
+  "Images/porta-46-211-f064a6f2cca7e64c7716818393390603-640-0.webp": {
+    "mtime": 1782518182.9136627,
+    "ast_hash": "65fc640045983ec79216053a3eac573f",
+    "semantic_hash": ""
+  },
+  "Images/porta-461-451b563bb1973b89f216818384247198-640-0.webp": {
+    "mtime": 1774027348.4014018,
+    "ast_hash": "c84cfc9145650907f934487a6e5ed528",
+    "semantic_hash": ""
+  },
+  "Images/porta-461-451b563bb1973b89f216922866997454-640-0.webp": {
+    "mtime": 1774027347.8432074,
+    "ast_hash": "5cbb4bf5104e6f8da961a53b573693fd",
+    "semantic_hash": ""
+  },
+  "Images/porta-48-7fff76c13be2b6f8f417758465731044-640-0.webp": {
+    "mtime": 1782518191.103767,
+    "ast_hash": "3fa409e8e7b81df1a04935216d6aecc9",
+    "semantic_hash": ""
+  },
+  "Images/porta-53-20a1893b86e7ed064b17738356121218-640-0.webp": {
+    "mtime": 1774027340.3568726,
+    "ast_hash": "d08176dbe803238b28023ae80f1fa049",
+    "semantic_hash": ""
+  },
+  "Images/porta-8-alm-21-ca620e9d59edbe178016535704273035-640-0.webp": {
+    "mtime": 1782518189.0567524,
+    "ast_hash": "694e4381f6d4ec4921b3f88a70b4821b",
+    "semantic_hash": ""
+  },
+  "Images/porta-correr-t301-3060fe76bd66b0fd0417363667748147-640-0.webp": {
+    "mtime": 1774027345.2034297,
+    "ast_hash": "51dd86729d872e9c81daafdc2b9af743",
+    "semantic_hash": ""
+  },
+  "Images/porta-couro-21-c64d5af2b4dc1626ce16823379065929-640-0.webp": {
+    "mtime": 1782518182.5074556,
+    "ast_hash": "7a4296af519e6dba4829120aba70cbc9",
+    "semantic_hash": ""
+  },
+  "Images/porta-couro1-734a2a95b866e3943d16823379064426-640-0.webp": {
+    "mtime": 1774027348.2661233,
+    "ast_hash": "c1ecea912b8962710daaa524e337ce46",
+    "semantic_hash": ""
+  },
+  "Images/porta-de-correr-011-0d893649bac462f21316197155559524-640-0.webp": {
+    "mtime": 1774027345.903616,
+    "ast_hash": "20fe97b327089a220d6f2938a75943c4",
+    "semantic_hash": ""
+  },
+  "Images/porta-de-correr-041-b0c2b62e7c0f57406516197156488419-640-0.webp": {
+    "mtime": 1774027345.7166328,
+    "ast_hash": "b9886d4c09821ed2687faab6d0179f78",
+    "semantic_hash": ""
+  },
+  "Images/porta-de-correr-071-f124f5c1a76a636a7416197156755050-640-0.webp": {
+    "mtime": 1774027345.4561303,
+    "ast_hash": "7dab140cf1adfbdc2cd43863237f51ff",
+    "semantic_hash": ""
+  },
+  "Images/porta-de-correr-tucano-1f2c8a8c7c8795422016480759511709-640-0.webp": {
+    "mtime": 1782518180.0851605,
+    "ast_hash": "3668592cce9342179daacb3d22560327",
+    "semantic_hash": ""
+  },
+  "Images/porta-egito-21-ab594f6d22ed00beac16916874553635-640-0.webp": {
+    "mtime": 1774027348.578067,
+    "ast_hash": "ace986c19a410fc42d721839a8569a79",
+    "semantic_hash": ""
+  },
+  "Images/porta-egito1-6fee3a12cca24e698a16818212967355-640-0.webp": {
+    "mtime": 1782518183.2079694,
+    "ast_hash": "5bc1b6b8d5ec8a1193778f82941e0514",
+    "semantic_hash": ""
+  },
+  "Images/seteira-011-f946217fffde82f71816183300354192-640-0.webp": {
+    "mtime": 1774027353.1986818,
+    "ast_hash": "8659338a455d665d6ffa3796e7975e98",
+    "semantic_hash": ""
+  },
+  "Images/seteira-01a11-8a8e2eba514b55e37116183308435225-640-0.webp": {
+    "mtime": 1774027353.01333,
+    "ast_hash": "a3b8e4495154b627efb69c5d6f1078ec",
+    "semantic_hash": ""
+  },
+  "Images/seteira-121-43f90eb69cbc60942016183300732723-640-0.webp": {
+    "mtime": 1774027346.807569,
+    "ast_hash": "6ccb04a1deaf1f883f110d286f4dc234",
+    "semantic_hash": ""
+  },
+  "Images/seteira-161-4b01d997b51635757f16183301071426-640-0.webp": {
+    "mtime": 1774027347.5653906,
+    "ast_hash": "6600772b45d12b70bc525af3163ff09f",
+    "semantic_hash": ""
+  },
+  "Images/seteira-171-55b175ade342f6960316183301379421-640-0.webp": {
+    "mtime": 1774027338.952953,
+    "ast_hash": "3d9e240b4d61568631ef64fe8cb20cdd",
+    "semantic_hash": ""
+  },
+  "Images/seteira-t2011-734487a24355d01e8e16194406211058-640-0.webp": {
+    "mtime": 1774027338.7982867,
+    "ast_hash": "2dbf0ef73e7935ad7a0a0d544292d647",
+    "semantic_hash": ""
+  },
+  "Images/t101-211-369ebe0c8b4d880b8616597232192116-640-0.webp": {
+    "mtime": 1782518180.9273899,
+    "ast_hash": "844f7286855c6a11a2e02c2f8445e9c3",
+    "semantic_hash": ""
+  },
+  "Images/t1011-5c6742ad71bd876e9616788995105882-640-0.webp": {
+    "mtime": 1782518181.1579473,
+    "ast_hash": "099df5ed558273c887da9b3155db44fc",
+    "semantic_hash": ""
+  },
+  "Images/t10111-292d9fce9f33de6c9716597232192898-640-0.webp": {
+    "mtime": 1782518181.016132,
+    "ast_hash": "ef8d865d157b2c56c3b98d0e1bba6fed",
+    "semantic_hash": ""
+  },
+  "logo.png": {
+    "mtime": 1773948747.8614256,
+    "ast_hash": "6748c6fb71c855e98afaa7cf0ca2ec64",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/baseline-01.jpg": {
+    "mtime": 1786992402.1198654,
+    "ast_hash": "22f37e24d592b96b76c3800143ee0c79",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/baseline-02.jpg": {
+    "mtime": 1786992402.5732608,
+    "ast_hash": "bb282c010cd7a3da4745348d0112c9f7",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/baseline-03.jpg": {
+    "mtime": 1786992403.044427,
+    "ast_hash": "c088508e3f19b30a66984acc5a85e4fb",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/baseline-04.jpg": {
+    "mtime": 1786992403.4962916,
+    "ast_hash": "47d29442efd9029dc8f39f50d898d500",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/baseline-05.jpg": {
+    "mtime": 1786992403.8194442,
+    "ast_hash": "34d64fa5125145890901deb17fb42b15",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/baseline-06.jpg": {
+    "mtime": 1786992404.3025322,
+    "ast_hash": "6c95191906b954e08fcbd3eb88709900",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/baseline-07.jpg": {
+    "mtime": 1786992405.0647519,
+    "ast_hash": "289d0b1078eaed535072648eedb8cae2",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/baseline-08.jpg": {
+    "mtime": 1786992405.8844142,
+    "ast_hash": "f202fa9cccfc2de8dcf424d2365f02c6",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-00.png": {
+    "mtime": 1786992871.7694414,
+    "ast_hash": "0e4d427c3b10aaa439baad7c2e7785ec",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-04.png": {
+    "mtime": 1786992491.6112387,
+    "ast_hash": "261cda66c3bfd33a6702017fc320ceff",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-05.png": {
+    "mtime": 1786992522.7943552,
+    "ast_hash": "62b2d3872cb6f1311d02b6ee1e712e3e",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-15.png": {
+    "mtime": 1786992554.9172983,
+    "ast_hash": "f3cbf9742e8e0e36e7c8d9380bba6c3d",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-21.png": {
+    "mtime": 1786992895.7962506,
+    "ast_hash": "2a5286468c59cbd6210c76ff58e47862",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-22.png": {
+    "mtime": 1786993286.4955454,
+    "ast_hash": "5f8823397bfca35626b6419f143424a9",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-23.png": {
+    "mtime": 1786993312.2414744,
+    "ast_hash": "71fd2ac7f94c9f7b031b08fa5c42ef9d",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-24.png": {
+    "mtime": 1786993343.342863,
+    "ast_hash": "4976a9cb1f2cfd3b7b0c5e6f01eb8877",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-25.png": {
+    "mtime": 1786993376.2263443,
+    "ast_hash": "90321fabaecfd1434e650da51ac4b658",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-26.png": {
+    "mtime": 1786993455.7855434,
+    "ast_hash": "e2f59882815863eae48f8b18bc722ecd",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-27.png": {
+    "mtime": 1786993501.0184808,
+    "ast_hash": "24f8fcb9679250796fa1a10c26980906",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-28.png": {
+    "mtime": 1786992922.0178936,
+    "ast_hash": "5e7da3cdbf8bd6db5353b171b6925eb9",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-29.png": {
+    "mtime": 1786992946.8158505,
+    "ast_hash": "02ee5ce4f4d3e7e6859de4be3abbc692",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-30.png": {
+    "mtime": 1786993021.8177235,
+    "ast_hash": "1e347f96c92c251d6ba95d659a2cb92b",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-31.png": {
+    "mtime": 1786993558.626246,
+    "ast_hash": "2d70690c90e98f5651a7eeb301a547bf",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-32.png": {
+    "mtime": 1786993053.5341647,
+    "ast_hash": "0411a1c52d8ad66e136cde90a1c0acde",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-33.png": {
+    "mtime": 1786993587.8321345,
+    "ast_hash": "253eb63f1050060c491dea841dcd1b6c",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-34.png": {
+    "mtime": 1786993672.3212285,
+    "ast_hash": "71f9f1d108ab7486005120fdd52097d0",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-35.png": {
+    "mtime": 1786993710.7285872,
+    "ast_hash": "1f3b690670471e111278f5c289537f37",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-36.png": {
+    "mtime": 1786994110.4432688,
+    "ast_hash": "6c5b052e60c913d8ce9cd48e26157a19",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-40.png": {
+    "mtime": 1786994480.1515665,
+    "ast_hash": "746966f209e707ebcd13228a18958a3f",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-41.png": {
+    "mtime": 1786994512.3795562,
+    "ast_hash": "ac111a439d8b7d26be130d5d7ce7bc6c",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-42.png": {
+    "mtime": 1786994674.206017,
+    "ast_hash": "05257fb0aef8bb1992683796d4194399",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-44.png": {
+    "mtime": 1786994603.1796503,
+    "ast_hash": "2256369268525d25730247eb5de08f68",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-48.png": {
+    "mtime": 1786993079.5449827,
+    "ast_hash": "d4adf01b9f2c222afa2e01c5d04445c1",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-49.png": {
+    "mtime": 1786993119.0714948,
+    "ast_hash": "e3f06c3c2f469d3826f8c96ae8f0f81e",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-64.png": {
+    "mtime": 1786992680.3906598,
+    "ast_hash": "443e0f16defbf109bd1b52bc4a53b11f",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-65.png": {
+    "mtime": 1786993754.143845,
+    "ast_hash": "ea83aa617dda9b83978941a3ca2c4fea",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-68.png": {
+    "mtime": 1786994155.1936939,
+    "ast_hash": "6b3702d202ff3f89ef6bbedfc1cf3b41",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-69.png": {
+    "mtime": 1786994191.3424387,
+    "ast_hash": "3e5a0e594bc72db36c790fdc2de477b9",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-70.png": {
+    "mtime": 1786994278.5297372,
+    "ast_hash": "19878c02219646124c0741db3dc973e5",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-71.png": {
+    "mtime": 1786992638.0985096,
+    "ast_hash": "6062d8213392eb79532b95f1bc5a4300",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-74.png": {
+    "mtime": 1786994307.4669135,
+    "ast_hash": "78ff63e7d0bae429e6c54c138f1ee68c",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-85.png": {
+    "mtime": 1786993788.8340323,
+    "ast_hash": "3f9479f61aa162d61048c81b59733d78",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-86.png": {
+    "mtime": 1786994338.0652256,
+    "ast_hash": "532829c63badfede8ec0b78f8a148868",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-87.png": {
+    "mtime": 1786993906.5112996,
+    "ast_hash": "6e6676f10d32ffe919768d93b9e7e3a6",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-88.png": {
+    "mtime": 1786993974.4815142,
+    "ast_hash": "3a991bf7d5e395a88003c321129e3ab3",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/candidates/id-89.png": {
+    "mtime": 1786993947.0426364,
+    "ast_hash": "273a395994ed940a4bde428cdcb9eea0",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/review-colonial.jpg": {
+    "mtime": 1786994363.1991036,
+    "ast_hash": "01d77782f8dd9c21364e9565fb746adc",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/review-distinctive-windows.jpg": {
+    "mtime": 1786994004.9931376,
+    "ast_hash": "80c0b7e076d4d01ce8efc24c6a53fad2",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/review-doors.jpg": {
+    "mtime": 1786992735.3033779,
+    "ast_hash": "43b53e2817b710622d41c08c176bd26b",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/review-openings.jpg": {
+    "mtime": 1786994714.5028002,
+    "ast_hash": "81254ed5901f91639286f14b8550e249",
+    "semantic_hash": ""
+  },
+  "tmp/external-image-review/review-rectangular-windows.jpg": {
+    "mtime": 1786993152.9289215,
+    "ast_hash": "64038407f27032ce4a0faff495b804ef",
+    "semantic_hash": ""
+  },
+  "tmp/image-review/review-01.jpg": {
+    "mtime": 1786991860.6339264,
+    "ast_hash": "22f37e24d592b96b76c3800143ee0c79",
+    "semantic_hash": ""
+  },
+  "tmp/image-review/review-02.jpg": {
+    "mtime": 1786991861.116811,
+    "ast_hash": "bb282c010cd7a3da4745348d0112c9f7",
+    "semantic_hash": ""
+  },
+  "tmp/image-review/review-03.jpg": {
+    "mtime": 1786991861.6287582,
+    "ast_hash": "c088508e3f19b30a66984acc5a85e4fb",
+    "semantic_hash": ""
+  },
+  "tmp/image-review/review-04.jpg": {
+    "mtime": 1786991862.0873446,
+    "ast_hash": "47d29442efd9029dc8f39f50d898d500",
+    "semantic_hash": ""
+  },
+  "tmp/image-review/review-05.jpg": {
+    "mtime": 1786991862.4360635,
+    "ast_hash": "34d64fa5125145890901deb17fb42b15",
+    "semantic_hash": ""
+  },
+  "tmp/image-review/review-06.jpg": {
+    "mtime": 1786991862.9251008,
+    "ast_hash": "6c95191906b954e08fcbd3eb88709900",
+    "semantic_hash": ""
+  },
+  "tmp/image-review/review-07.jpg": {
+    "mtime": 1786991863.3790803,
+    "ast_hash": "289d0b1078eaed535072648eedb8cae2",
+    "semantic_hash": ""
+  },
+  "tmp/image-review/review-08.jpg": {
+    "mtime": 1786991863.6798227,
+    "ast_hash": "f202fa9cccfc2de8dcf424d2365f02c6",
+    "semantic_hash": ""
+  }
+}

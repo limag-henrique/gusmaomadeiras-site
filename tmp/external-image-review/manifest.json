@@ -1,0 +1,693 @@
+[
+  {
+    "id": 0,
+    "title": "Janela de angelim 41 - panorâmica de correr",
+    "image": "Images/janela-41x1-3c34f2f835b922a67816182507624079-640-0.webp",
+    "images": [
+      "Images/janela-41-21-c0dfca5317376ff14216916869686249-640-0.webp"
+    ],
+    "aiImage": "Images/ai-usage/janela-de-angelim-41-panoramica-de-correr-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "rectangular-windows",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 4,
+    "title": "Porta de angelim 36 - BigBrother espaçada",
+    "image": "Images/porta-361-b3f8d2c5a71a9d0ad516182504462479-640-0.webp",
+    "images": [],
+    "aiImage": "Images/ai-usage/porta-de-angelim-36-bigbrother-espacada-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1122,
+      1402
+    ],
+    "group": "doors",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 5,
+    "title": "Porta de angelim 26 - BigBrother",
+    "image": "Images/porta-261-aaada511e2edef503916182500450073-640-0.webp",
+    "images": [
+      "Images/porta-26-2-afca8ec4b7ce5e1f4616480771636331-640-0.webp",
+      "Images/26-21-ce4a37777456f18f2d16511717734076-640-0.webp",
+      "Images/porta-26-21-be71ba165c2446af1d16535723673234-640-0.webp"
+    ],
+    "aiImage": "Images/ai-usage/porta-de-angelim-26-bigbrother-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1536,
+      1024
+    ],
+    "group": "doors",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 15,
+    "title": "Porta de angelim 25 - mexicana",
+    "image": "Images/porta-251-17283e26b430a0768316182500220570-640-0.webp",
+    "images": [],
+    "aiImage": "Images/ai-usage/porta-de-angelim-25-mexicana-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1402,
+      1122
+    ],
+    "group": "doors",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 21,
+    "title": "Janela de angelim 44 - panorâmica de correr",
+    "image": "Images/janela-44-3d8d0ea2d5bf73e24217738347726354-640-0.webp",
+    "images": [],
+    "aiImage": "Images/ai-usage/janela-de-angelim-44-panoramica-de-correr-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "rectangular-windows",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 22,
+    "title": "Janela de angelim 01 - imperial dupla",
+    "image": "Images/janela-01-21-0ddef8948777e0b42016179983069160-640-0.webp",
+    "images": [
+      "Images/janela-01-11-b0371419fd8d6725bd16179983078789-640-0.webp"
+    ],
+    "aiImage": "Images/ai-usage/janela-de-angelim-01-imperial-dupla-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "distinctive-windows",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 23,
+    "title": "Janela de angelim 02 - dupla vidro e veneziana",
+    "image": "Images/janela-02x-2-dec20c94e171fc071f16182508800239-640-0.webp",
+    "images": [
+      "Images/janela-02x-1-9993f61a89796f56bd16182508802297-640-0.webp"
+    ],
+    "aiImage": "Images/ai-usage/janela-de-angelim-02-dupla-vidro-e-veneziana-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "distinctive-windows",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 24,
+    "title": "Janela de angelim 04 - napoleão dupla",
+    "image": "Images/janela-04-21-60fd5e4fbec9571a6216182508791478-640-0.webp",
+    "images": [
+      "Images/janela-04-11-36c5fcf351dc48ad9d16182508792737-640-0.webp"
+    ],
+    "aiImage": "Images/ai-usage/janela-de-angelim-04-napoleao-dupla-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "distinctive-windows",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 25,
+    "title": "Janela de angelim 37 - dupla vidro e almofada diagonal",
+    "image": "Images/janela-37x1-b562fbd92a884e9a1616182512228949-640-0.webp",
+    "images": [
+      "Images/janela-3811-faacde0f38af02bc8716184185168215-640-0.webp"
+    ],
+    "aiImage": "Images/ai-usage/janela-de-angelim-37-dupla-vidro-e-almofada-diagonal-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "distinctive-windows",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 26,
+    "title": "Janela de angelim 09 - imperial de abrir por fora e correr interno",
+    "image": "Images/janela-091-697743ee318bc38f0a16182509921549-640-0.webp",
+    "images": [
+      "Images/janela-01-111-b0371419fd8d6725bd16182509922746-640-0.webp"
+    ],
+    "aiImage": "Images/ai-usage/janela-de-angelim-09-imperial-de-abrir-por-fora-e-correr-interno-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "distinctive-windows",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 27,
+    "title": "Janela de angelim 29 - abrir por fora e correr interno",
+    "image": "Images/janela-29x1-4068e9ecae020ec7a816182510866459-640-0.webp",
+    "images": [
+      "Images/janela-02x-111-9993f61a89796f56bd16182510869133-640-0.webp"
+    ],
+    "aiImage": "Images/ai-usage/janela-de-angelim-29-abrir-por-fora-e-correr-interno-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "distinctive-windows",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 28,
+    "title": "Janela de angelim 10 - dupla de correr",
+    "image": "Images/janela-10x1-7e222a5ec37454758f16182509940644-640-0.webp",
+    "images": [],
+    "aiImage": "Images/ai-usage/janela-de-angelim-10-dupla-de-correr-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "rectangular-windows",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 29,
+    "title": "Janela de angelim 06 - vidro quadriculado de correr",
+    "image": "Images/janela-06x1-af22e8b2f1847c719716182508802877-640-0.webp",
+    "images": [
+      "Images/janela06-21-b5081d54ca402900eb16539336819563-640-0.webp"
+    ],
+    "aiImage": "Images/ai-usage/janela-de-angelim-06-vidro-quadriculado-de-correr-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "rectangular-windows",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 30,
+    "title": "Janela de angelim 17 - vidro quadriculado de correr",
+    "image": "Images/janela-17x1-23358eb4373fdbadae16182509974746-640-0.webp",
+    "images": [],
+    "aiImage": "Images/ai-usage/janela-de-angelim-17-vidro-quadriculado-de-correr-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "rectangular-windows",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 31,
+    "title": "Janela de angelim 31 - tucano de correr",
+    "image": "Images/janela-31x1-5be6f08c1dc021ae7e16182512336652-640-0.webp",
+    "images": [
+      "Images/janela-31x-2-300187d101379e945816479854080981-640-0.webp"
+    ],
+    "aiImage": "Images/ai-usage/janela-de-angelim-31-tucano-de-correr-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "distinctive-windows",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 32,
+    "title": "Janela de angelim 18 - vidro quadriculado",
+    "image": "Images/janela-18-31-bf81e506d8c75885ec16552341990336-640-0.webp",
+    "images": [
+      "Images/janela-181-52d2f6e38b4a6beedd16552341992752-640-0.webp"
+    ],
+    "aiImage": "Images/ai-usage/janela-de-angelim-18-vidro-quadriculado-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "rectangular-windows",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 33,
+    "title": "Janela de angelim 32 - napoleão de vidro",
+    "image": "Images/janela-321-adccb42a39bbcab57b16182512295840-640-0.webp",
+    "images": [],
+    "aiImage": "Images/ai-usage/janela-de-angelim-32-napoleao-de-vidro-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "distinctive-windows",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 34,
+    "title": "Janela de angelim 33 - imperial de vidro",
+    "image": "Images/janela-331-923a623a22f160110916182512285622-640-0.webp",
+    "images": [],
+    "aiImage": "Images/ai-usage/janela-de-angelim-33-imperial-de-vidro-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "distinctive-windows",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 35,
+    "title": "Janela de angelim 39 - vidro diagonal",
+    "image": "Images/janela-39x1-daa9cfb03e2f10412816182512212643-640-0.webp",
+    "images": [],
+    "aiImage": "Images/ai-usage/janela-de-angelim-39-vidro-diagonal-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "distinctive-windows",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 36,
+    "title": "Báscula de angelim 03a - vidro quadriculado com arco colonial",
+    "image": "Images/bascula-031-aaad479954d4b37b0116182639185654-640-0.webp",
+    "images": [],
+    "aiImage": "Images/ai-usage/bascula-de-angelim-03a-vidro-quadriculado-com-arco-colonial-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1536,
+      1024
+    ],
+    "group": "colonial",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 40,
+    "title": "Báscula de angelim 15 - panorâmica",
+    "image": "Images/bascula-151-3208b6d89980837b5916183201607725-640-0.webp",
+    "images": [
+      "Images/bascula-15-panoramica-343b1815401376b31a16480762991608-640-0.webp"
+    ],
+    "aiImage": "Images/ai-usage/bascula-de-angelim-15-panoramica-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      627,
+      627
+    ],
+    "group": "openings",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 41,
+    "title": "Báscula de angelim 11 - tucano",
+    "image": "Images/bascula-111-21b225ee91a95a888216182571893683-640-0.webp",
+    "images": [
+      "Images/bascula-11-2-7c0dc5609a0e2742ef16479844483286-640-0.webp"
+    ],
+    "aiImage": "Images/ai-usage/bascula-de-angelim-11-tucano-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "openings",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 42,
+    "title": "Báscula de angelim t202 - com vidro temperado",
+    "image": "Images/bascula-t2021-5c9d6d240224206d2a16194405687056-640-0.webp",
+    "images": [],
+    "aiImage": "Images/ai-usage/bascula-de-angelim-t202-com-vidro-temperado-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      627,
+      627
+    ],
+    "group": "openings",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 44,
+    "title": "Porta de correr de angelim 07 - panorâmica",
+    "image": "Images/porta-de-correr-071-f124f5c1a76a636a7416197156755050-640-0.webp",
+    "images": [],
+    "aiImage": "Images/ai-usage/porta-de-correr-de-angelim-07-panoramica-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1536,
+      1024
+    ],
+    "group": "openings",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 48,
+    "title": "Janela de angelim t102 - com vidro temperado",
+    "image": "Images/janela-vt2-copy1-a41cd5d52187f02db516322266151288-640-0.webp",
+    "images": [],
+    "aiImage": "Images/ai-usage/janela-de-angelim-t102-com-vidro-temperado-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "rectangular-windows",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 49,
+    "title": "Janela de angelim t101 - com vidro temperado",
+    "image": "Images/janela-vt111-073287be8f252fabbd16597232190854-640-0.webp",
+    "images": [
+      "Images/t101-211-369ebe0c8b4d880b8616597232192116-640-0.webp",
+      "Images/t10111-292d9fce9f33de6c9716597232192898-640-0.webp",
+      "Images/janela-t1011-a4d5e2091a9412349016788993800654-640-0.webp",
+      "Images/t1011-5c6742ad71bd876e9616788995105882-640-0.webp"
+    ],
+    "aiImage": "Images/ai-usage/janela-de-angelim-t101-com-vidro-temperado-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "rectangular-windows",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 64,
+    "title": "Porta de angelim 104 - estruturada",
+    "image": "Images/porta-1041-635594ae7e5203aabb16789020044303-640-0.webp",
+    "images": [],
+    "aiImage": "Images/ai-usage/porta-de-angelim-104-estruturada-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      972,
+      1619
+    ],
+    "group": "doors",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 65,
+    "title": "Janela de angelim 42 - BigBrother de correr",
+    "image": "Images/janela-42-1-5222ec4b2e688d568516503878884150-640-0.webp",
+    "images": [
+      "Images/janela-42-2-02ba18ccce9649243816503878883413-640-0.webp",
+      "Images/42-1-1a1b174320dbbf7d6816503881997722-640-0.webp",
+      "Images/42-2-a7e8e8b14809e48c1216503881999732-640-0.webp"
+    ],
+    "aiImage": "Images/ai-usage/janela-de-angelim-42-bigbrother-de-correr-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1402,
+      1122
+    ],
+    "group": "distinctive-windows",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 68,
+    "title": "Janela de angelim 18a - vidro quadriculado com arco colonial",
+    "image": "Images/janela-18a1-6203b25b9de55e59af16334417042019-640-0.webp",
+    "images": [],
+    "aiImage": "Images/ai-usage/janela-de-angelim-18a-vidro-quadriculado-com-arco-colonial-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "colonial",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 69,
+    "title": "Janela de angelim 26a - almofada com arco colonial",
+    "image": "Images/janela-26a1-d1b5af522bd883c75c16334418455214-640-0.webp",
+    "images": [
+      "Images/26a-21-78c4238b7ab6719ca616600575487148-640-0.webp"
+    ],
+    "aiImage": "Images/ai-usage/janela-de-angelim-26a-almofada-com-arco-colonial-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "colonial",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 70,
+    "title": "Janela de angelim 02a - dupla vidro e veneziana com arco colonial",
+    "image": "Images/janela-02a1-184ab9769c74f9ed5516334413252159-640-0.webp",
+    "images": [
+      "Images/janela-02a-11-ec41b271c68f8c975216334413253298-640-0.webp"
+    ],
+    "aiImage": "Images/ai-usage/janela-de-angelim-02a-dupla-vidro-e-veneziana-com-arco-colonial-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "colonial",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 71,
+    "title": "Porta de angelim 35 - marchetada vertical",
+    "image": "Images/porta-351-306434cce22961028916182504138947-640-0.webp",
+    "images": [],
+    "aiImage": "Images/ai-usage/porta-de-angelim-35-marchetada-vertical-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      972,
+      1619
+    ],
+    "group": "doors",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 74,
+    "title": "Seteira de angelim 01a - vidro quadriculado com arco colonial",
+    "image": "Images/seteira-01a11-8a8e2eba514b55e37116183308435225-640-0.webp",
+    "images": [],
+    "aiImage": "Images/ai-usage/seteira-de-angelim-01a-vidro-quadriculado-com-arco-colonial-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "colonial",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 85,
+    "title": "Janela de angelim 26 - almofada",
+    "image": "Images/janela-26x1-f2cfac34325e6c0a1016182510034245-640-0.webp",
+    "images": [
+      "Images/janela-26x-21-cd2bf26075c810b0bd16479848843920-640-0.webp"
+    ],
+    "aiImage": "Images/ai-usage/janela-de-angelim-26-almofada-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "distinctive-windows",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 86,
+    "title": "Janela de angelim 05a - vidro e almofada com arco colonial",
+    "image": "Images/janela-05a1-67953d435a5149064916334415645934-640-0.webp",
+    "images": [],
+    "aiImage": "Images/ai-usage/janela-de-angelim-05a-vidro-e-almofada-com-arco-colonial-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "colonial",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 87,
+    "title": "Janela de angelim 34 - mexicana",
+    "image": "Images/janela-34x1-a300379a4b3669238216182512256369-640-0.webp",
+    "images": [
+      "Images/janela-34-21-92e53c5dc1120be8fe16596343832377-640-0.webp"
+    ],
+    "aiImage": "Images/ai-usage/janela-de-angelim-34-mexicana-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "distinctive-windows",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 88,
+    "title": "Janela de angelim 35 - imperial mexicana",
+    "image": "Images/janela-351-8dc230c529e089a34216182512235762-640-0.webp",
+    "images": [],
+    "aiImage": "Images/ai-usage/janela-de-angelim-35-imperial-mexicana-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "distinctive-windows",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  },
+  {
+    "id": 89,
+    "title": "Janela de angelim 40 - BigBrother",
+    "image": "Images/janela-40x11-5603bf26fd0a45ea6716182513101567-640-0.webp",
+    "images": [],
+    "aiImage": "Images/ai-usage/janela-de-angelim-40-bigbrother-ia.webp",
+    "originalSize": [
+      640,
+      640
+    ],
+    "currentAiSize": [
+      1254,
+      1254
+    ],
+    "group": "distinctive-windows",
+    "geometry": "Preserve the exact visible product geometry from the references: outer contour, frame, trim, leaves, panels, glazing, divisions, hardware, wood grain and opening direction."
+  }
+]
